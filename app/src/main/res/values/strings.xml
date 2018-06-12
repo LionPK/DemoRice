@@ -6,6 +6,8 @@
     <string name="hint_password">รหัสผ่าน</string>
     <string name="button_login">เข้าสู่ระบบ</string>
     <string name="button_register">ลงทะเบียน</string>
+    <string name="button_exit">ย้อนกลับ</string>
+    <string name="toolbar"></string>
 
     <string name="text_username">กรุณากรอกชื่อผู้ใช้ </string>
     <string name="text_fast_name">กรุณากรอกชื่อ(รองรับภาษาไทย)</string>
@@ -14,7 +16,8 @@
     <string name="text_confirm_name">กรุณากรอกยืนยันรหัสผ่าน(A-Z, a-z, 0-9, !@#$%^* )</string>
     <string name="text_career">กรุณากรอกระบุอาชีพ</string>
 
-
+    <string name="text_sex">กรุณากรอกระบุเพศ</string>
+    <string name="text_save">บันทึก</string>
 
 
 </resources>

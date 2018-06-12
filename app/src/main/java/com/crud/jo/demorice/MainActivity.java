@@ -14,17 +14,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnLogin = (Button) findViewById(R.id.btnLogin);
-
-        //link to Sing In
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),
-                        LoginActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
+//        btnLogin = (Button) findViewById(R.id.btnLogin);
+//
+//        //link to Sing In
+//        btnLogin.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                Intent i = new Intent(getApplicationContext(),
+//                        LoginActivity.class);
+//                startActivity(i);
+//                finish();
+//            }
+//        });
 
     }
 }

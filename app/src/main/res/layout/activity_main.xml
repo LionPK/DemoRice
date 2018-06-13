@@ -131,7 +131,7 @@
             tools:layout_editor_absoluteY="516dp">
 
             <Button
-                android:id="@+id/login"
+                android:id="@+id/btnLogin"
                 style="@style/btn_main"
                 android:fontFamily="@font/kanit_bold"
                 android:text="เข้าสู่ระบบ"
@@ -143,7 +143,7 @@
                 android:layout_height="30dp" />
 
             <Button
-                android:id="@+id/register"
+                android:id="@+id/btnRegister"
                 style="@style/btn_main"
                 android:fontFamily="@font/kanit_bold"
                 android:text="สมัครสมาชิก"

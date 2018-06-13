@@ -12,10 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         app:title="สมัครสมาชิก"
-        app:subtitle=" "
         style="@style/MyToolbar"
         />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -168,8 +170,9 @@
             android:layout_alignParentRight="true"
             android:text="@string/text_save" />
 
-    </LinearLayout>
+    </LinearLayout></ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>
+
 

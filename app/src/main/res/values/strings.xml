@@ -3,7 +3,7 @@
 
     <!--set string login form-->
     <string name="hint_email">อีเมล์(example@gmail.com)</string>
-    <string name="hint_password">รหัสผ่าน</string>
+    <string name="hint_password">รหัสผ่าน(Tt1234#)</string>
     <string name="button_login">เข้าสู่ระบบ</string>
     <string name="button_register">ลงทะเบียน</string>
 </resources>

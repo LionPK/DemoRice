@@ -3,10 +3,12 @@
     <color name="colorPrimary">#00e676</color>
     <color name="colorPrimaryDark">#66ffa6</color>
     <color name="colorAccent">#00b248</color>
-    <color name="loginPageBackgroundColor">#e2f1f8</color>
+    <color name="loginPageBackgroundColor">#e8eaf6</color>
 
     <color name="textColorPrimary">#442C2E</color>
     <color name="toolbarIconColor">@color/textColorPrimary</color>
     <color name="productGridBackgroundColor">#FFFFFF</color>
     <color name="colorControlActivated">#FBB8AC</color>
+    <color name="colorPink">#f06292</color>
+    <color name="colorIndigo">#4B0082</color>
 </resources>

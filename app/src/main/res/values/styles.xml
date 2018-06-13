@@ -73,4 +73,13 @@
         </item>
     </style>
 
+    <style name="DemoRice.Button.Style" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/colorPink</item>
+    </style>
+
+    <style name="DemoRice.Button.Style.login" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/colorIndigo</item>
+        <item name="colorButtonNormal">@color/colorPink</item>
+    </style>
+
 </resources>

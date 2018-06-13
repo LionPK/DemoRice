@@ -73,13 +73,12 @@
         </item>
     </style>
 
-    <style name="DemoRice.Button.Style" parent="Theme.AppCompat.Light">
+    <style name="DemoRice.Button.Style" parent="Widget.MaterialComponents.Button">
         <item name="colorControlHighlight">@color/colorPink</item>
-    </style>
-
-    <style name="DemoRice.Button.Style.login" parent="Theme.AppCompat.Light">
-        <item name="colorControlHighlight">@color/colorIndigo</item>
-        <item name="colorButtonNormal">@color/colorPink</item>
+        <item name="backgroundTint">?attr/colorPrimaryDark</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">
+            @animator/shr_next_button_state_list_anim
+        </item>
     </style>
 
     <style name="MyToolbar">

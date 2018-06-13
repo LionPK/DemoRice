@@ -76,8 +76,7 @@
 
             <android.support.design.button.MaterialButton
                 android:id="@+id/login_button"
-                android:theme="@style/DemoRice.Button.Style.login"
-                style="@style/Widget.AppCompat.Button.Borderless"
+                style="@style/Widget.demorice.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -88,8 +87,7 @@
 
             <android.support.design.button.MaterialButton
                 android:id="@+id/register_button"
-                android:theme="@style/DemoRice.Button.Style"
-                style="@style/Widget.AppCompat.Button.Borderless"
+                style="@style/Widget.demorice.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"

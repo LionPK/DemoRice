@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.support.v7.widget.Toolbar;
+import android.support.v7.app.AlertDialog.Builder;
 
 public class RegisterActivity extends AppCompatActivity {
     private Button button_exit;
@@ -35,5 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
                 finish();
             }
         });
+
     }
+
 }

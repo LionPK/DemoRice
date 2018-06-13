@@ -73,6 +73,7 @@
         </item>
     </style>
 
+<<<<<<< HEAD
     <style name="DemoRice.Button.Style" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/colorPink</item>
     </style>
@@ -80,6 +81,22 @@
     <style name="DemoRice.Button.Style.login" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/colorIndigo</item>
         <item name="colorButtonNormal">@color/colorPink</item>
+=======
+    <style name="MyToolbar">
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark</item>
+        <item name="navigationIcon">@drawable/ic_keyboard_backspace_black_24dp</item>
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+
+    <!-- main -->
+    <style name="btn_main" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:background">@drawable/btn_main</item>
+        <item name="android:radius">20dp</item>
+>>>>>>> 45f6b50792dce485d76738baee020b35c188f45a
     </style>
 
 </resources>

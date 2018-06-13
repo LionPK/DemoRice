@@ -29,11 +29,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="40dp"
+            android:fontFamily="@font/kanit_bold"
             android:text="@string/app_name"
             android:textAllCaps="true"
+<<<<<<< HEAD
             android:textSize="20sp"
             android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.demorice.Title"/>
+=======
+            android:textAppearance="@style/TextAppearance.demorice.Title"
+            android:textSize="20sp" />
+>>>>>>> 45f6b50792dce485d76738baee020b35c188f45a
 
         <!-- Snippet from "Add text fields" section goes here. -->
         <android.support.design.widget.TextInputLayout

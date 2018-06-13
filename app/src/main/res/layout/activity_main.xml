@@ -19,24 +19,27 @@
         tools:layout_editor_absoluteX="62dp"
         tools:layout_editor_absoluteY="0dp">
 
-        <TextView
-            android:id="@+id/space1"
+
+        <TableRow
+            android:id="@+id/head"
             android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:layout_height="92dp"
+            android:background="#bde0ec"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp">
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/kanit_bold"
-            android:text="ระบบวิเคราะห์สภาพพื้นที่สำหรับปลูกข้าว"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="42dp"
-            tools:layout_editor_absoluteY="48dp" />
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/logo" />
 
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/title" />
+        </TableRow>
 
         <TextView
             android:id="@+id/space2"

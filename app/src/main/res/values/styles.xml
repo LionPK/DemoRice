@@ -80,4 +80,13 @@
         <item name="android:elevation">4dp</item>
     </style>
 
+
+    <!-- main -->
+    <style name="btn_main" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:background">@drawable/btn_main</item>
+        <item name="android:radius">20dp</item>
+    </style>
+
 </resources>

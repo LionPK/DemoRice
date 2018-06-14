@@ -28,11 +28,8 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".RegisterActivity" />
-<<<<<<< HEAD
         <activity android:name=".DisplayUserDataActivity"></activity>
-=======
         <activity android:name=".RiceActivity"></activity>
->>>>>>> f720f4a27382e42f825f0062691d0093dca29e62
     </application>
 
 </manifest>

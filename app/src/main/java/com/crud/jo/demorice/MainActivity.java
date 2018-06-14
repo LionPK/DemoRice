@@ -11,21 +11,21 @@ import android.widget.Spinner;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private Button btnLogin;
-    private Button btnRegister;
+    private Button btnLoginLink;
+    private Button btnRegisterLink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnLogin = (Button) findViewById(R.id.btnLogin);
-        btnRegister = (Button) findViewById(R.id.btnRegister);
+        btnLoginLink = (Button) findViewById(R.id.btnLogin);
+        btnRegisterLink = (Button) findViewById(R.id.btnRegister);
 
         //link to Sign In
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+        btnLoginLink.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),
+                Intent i = new Intent(MainActivity.this,
                         LoginActivity.class);
                 startActivity(i);
                 finish();
@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //link to Sign Up
-        btnRegister.setOnClickListener(new View.OnClickListener() {
+        btnRegisterLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),
+                Intent i = new Intent(MainActivity.this,
                         RegisterActivity.class);
                 startActivity(i);
                 finish();

@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_login"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:title="ลงชื่อเข้าใช้งาน"
+        style="@style/MyToolbar"/>
+
+
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -48,10 +65,10 @@
                 android:id="@+id/email_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
-                android:maxLines="1"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:maxLength="30"
+                android:maxLines="1"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -65,8 +82,9 @@
                 android:id="@+id/password_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
+                android:maxLength="12"
+                android:singleLine="true"
+                android:inputType="textPassword"/>
         </android.support.design.widget.TextInputLayout>
 
         <!-- Snippet from "Add buttons" section goes here. -->
@@ -102,3 +120,4 @@
 
     </LinearLayout>
 </ScrollView>
+</android.support.constraint.ConstraintLayout>

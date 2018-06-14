@@ -11,5 +11,20 @@
     <color name="colorControlActivated">#FBB8AC</color>
     <color name="colorPink">#f06292</color>
     <color name="colorIndigo">#4B0082</color>
+
+    <!--color login and register-->
+    <color name="bg_login">#26ae90</color>
+    <color name="bg_register">#2e3237</color>
+    <color name="bg_main">#428bca</color>
+    <color name="white">#ffffff</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="input_register">#888888</color>
+    <color name="input_register_bg">#3b4148</color>
+    <color name="input_register_hint">#5e6266</color>
+    <color name="btn_login">#26ae90</color>
+    <color name="btn_login_bg">#eceef1</color>
+    <color name="lbl_name">#333333</color>
+    <color name="btn_logut_bg">#ff6861</color>
 </resources>
 

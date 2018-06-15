@@ -22,7 +22,7 @@ public class ShowAllStudentsActivity extends AppCompatActivity {
 
     ListView StudentListView;
     ProgressBar progressBar;
-    String HttpUrl = "http://192.168.1.11/JoProjectEx/Jo/phpApi/AllStudentData.php";
+    String HttpUrl = "http://192.168.3.107/RiceApp/Rice/android_view_api/rice_list.php";
     List<String> IdList = new ArrayList<>();
 
 

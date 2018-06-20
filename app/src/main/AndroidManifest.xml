@@ -42,11 +42,15 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".RegisterActivity" />
+<<<<<<< HEAD
+        <activity android:name=".DisplayUserDataActivity"></activity>
+=======
 
         <activity android:name=".DisplayUserDataActivity" />
 
         <activity android:name=".Main"></activity>
 
+>>>>>>> 951c9a158b5df5351e3a0f6446818cbd36414695
     </application>
 
 </manifest>

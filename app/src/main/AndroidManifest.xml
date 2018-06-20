@@ -39,7 +39,12 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".RegisterActivity" />
+<<<<<<< HEAD
         <activity android:name=".DisplayUserDataActivity" />
+=======
+        <activity android:name=".DisplayUserDataActivity"></activity>
+        <activity android:name=".Rice_view"></activity>
+>>>>>>> 3f430f2bffcd97734dd2ca4723f4ac2fa113802b
     </application>
 
 </manifest>

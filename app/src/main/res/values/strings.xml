@@ -25,11 +25,21 @@
     <string name="name">Fullname</string>
 
     <!-- Sign in error message -->
-    <string name="eye_error_password_more_length">รหัสผ่านต้องกรอกอย่างน้อย 8 ตัวอักษร</string>
-    <string name="eye_error_not_enter_email">กรุณากรอกอีเมล์</string>
-    <string name="eye_error_not_match_email">กรุณากรอกอีเมล์ให้ถูกต้องตามตัวอย่าง Exam@exam.com</string>
-    <string name="eye_error_not_enter_password">กรุณากรอกรหัสผ่าน</string>
-    <string name="eye_error_password_less">กรุณากรอกรหัสอย่างน้อย 8 ตัวอักษร และไม่เกิน 12 อักษร</string>
+    <string name="rice_error_password_more_length">รหัสผ่านต้องกรอกอย่างน้อย 8 ตัวอักษร</string>
+    <string name="rice_error_not_enter_email">กรุณากรอกอีเมล์</string>
+    <string name="rice_error_not_match_email">กรุณากรอกอีเมล์ให้ถูกต้องตามตัวอย่าง Exam@exam.com</string>
+    <string name="rice_error_not_enter_password">กรุณากรอกรหัสผ่าน</string>
+    <string name="rice_error_password_less">กรุณากรอกรหัสอย่างน้อย 8 ตัวอักษร และไม่เกิน 12 อักษร</string>
+
+    <!-- Sign up error message -->
+    <string name="rice_error_not_enter_name">กรุณากรอกชื่อผู้ใช้งาน</string>
+    <string name="rice_error_not_enter_first">กรุณากรอกชื่อ</string>
+    <string name="rice_error_not_enter_last">กรุณากรอกนามสกุล</string>
+    <string name="rice_error_not_enter_sex">กรุณากรอกเพศ</string>
+    <string name="rice_error_not_enter_pass">กรุณากรอกรหัสผ่าน</string>
+    <string name="rice_error_not_enter_re_pass">กรุณากรอกรหัสยืนยัน</string>
+    <string name="rice_error_not_enter_re_pass_notmatch">รหัสการยืนยันไม่ตรงกันโปรดตรวจสอบอีกครั้ง</string>
+    <string name="rice_error_not_enter_work">กรุณากรอกอาชีพ</string>
 
 
 </resources>

@@ -1,6 +1,5 @@
 package com.crud.jo.demorice;
 
-
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -24,13 +23,13 @@ import java.util.HashMap;
 
 public class Main extends AppCompatActivity {
 
-    private String TAG = MainActivity.class.getSimpleName();
+    private String TAG = Main.class.getSimpleName();
 
     private ProgressDialog pDialog;
     private ListView lv;
 
     // URL to get contacts JSON
-    private static String url = "www.projectricearea.com/android_view_api.html/rice_list.php ";
+    private static String url = "http://www.projectricearea.com/android_view_api/rice_list.php";
 
     ArrayList<HashMap<String, String>> contactList;
 
@@ -81,26 +80,25 @@ public class Main extends AppCompatActivity {
                     for (int i = 0; i < contacts.length(); i++) {
                         JSONObject c = contacts.getJSONObject(i);
 
-                        String id = c.getString("id");
-                        String name = c.getString("name");
-                        String email = c.getString("email");
-                        String address = c.getString("address");
-                        String gender = c.getString("gender");
+                        String id_rice = c.getString("id_rice");
+                        String name_rice = c.getString("name_rice");
+                        String type_rice = c.getString("type_rice");
+                        String detail_rice = c.getString("detail_rice");
 
-                        // Phone node is JSON Object
-                        JSONObject phone = c.getJSONObject("phone");
-                        String mobile = phone.getString("mobile");
-                        String home = phone.getString("home");
-                        String office = phone.getString("office");
+//                        // Phone node is JSON Object
+//                        JSONObject phone = c.getJSONObject("phone");
+//                        String mobile = phone.getString("mobile");
+//                        String type = phone.getString("type");
+//                        String detail = phone.getString("detail");
 
                         // tmp hash map for single contact
                         HashMap<String, String> contact = new HashMap<>();
 
                         // adding each child node to HashMap key => value
-                        contact.put("id", id);
-                        contact.put("name", name);
-                        contact.put("email", email);
-                        contact.put("mobile", mobile);
+                        contact.put("id_rice", id_rice);
+                        contact.put("name_rice", name_rice);
+                        contact.put("type_rice", type_rice);
+                        contact.put("detail_rice", detail_rice);
 
                         // adding contact to contact list
                         contactList.add(contact);
@@ -146,9 +144,9 @@ public class Main extends AppCompatActivity {
              * */
             ListAdapter adapter = new SimpleAdapter(
                     Main.this, contactList,
-                    R.layout.list_item, new String[]{"name", "email",
-                    "mobile"}, new int[]{R.id.name,
-                    R.id.email, R.id.mobile});
+                    R.layout.list_item, new String[]{"name", "type",
+                    "detail"}, new int[]{R.id.name,
+                    R.id.type, R.id.detail});
 
             lv.setAdapter(adapter);
         }

@@ -41,7 +41,7 @@
                 android:id="@+id/user_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="textCapWords"
                 android:maxLines="1" />
         </android.support.design.widget.TextInputLayout>
 
@@ -58,7 +58,7 @@
                 android:id="@+id/fast_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="textCapWords"
                 android:maxLines="1" />
         </android.support.design.widget.TextInputLayout>
 
@@ -74,7 +74,7 @@
                 android:id="@+id/last_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="textCapWords"
                 android:maxLines="1" />
         </android.support.design.widget.TextInputLayout>
 
@@ -91,7 +91,7 @@
                 android:id="@+id/sex_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="textCapWords"
                 android:maxLines="1" />
         </android.support.design.widget.TextInputLayout>
 
@@ -109,7 +109,7 @@
                 android:id="@+id/email_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                 android:maxLines="1" />
         </android.support.design.widget.TextInputLayout>
 

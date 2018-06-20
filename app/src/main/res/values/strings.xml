@@ -24,5 +24,12 @@
     <string name="btn_logout">LOGOUT</string>
     <string name="name">Fullname</string>
 
+    <!-- Sign in error message -->
+    <string name="eye_error_password_more_length">รหัสผ่านต้องกรอกอย่างน้อย 8 ตัวอักษร</string>
+    <string name="eye_error_not_enter_email">กรุณากรอกอีเมล์</string>
+    <string name="eye_error_not_match_email">กรุณากรอกอีเมล์ให้ถูกต้องตามตัวอย่าง Exam@exam.com</string>
+    <string name="eye_error_not_enter_password">กรุณากรอกรหัสผ่าน</string>
+    <string name="eye_error_password_less">กรุณากรอกรหัสอย่างน้อย 8 ตัวอักษร และไม่เกิน 12 อักษร</string>
+
 
 </resources>

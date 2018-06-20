@@ -4,8 +4,8 @@ package com.crud.jo.demorice;
  * Created by Juned on 3/4/2017.
  */
 
-public class Student {
+public class Rice {
 
-    public String StudentName ;
+    public String RiceName ;
 
 }

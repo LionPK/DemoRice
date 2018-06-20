@@ -12,8 +12,6 @@
         android:textColor="#fff"
         android:textSize="24dp"
         android:text="Items"
-        android:padding="10dp"
-
-        />
+        android:padding="10dp" />
 
 </LinearLayout>

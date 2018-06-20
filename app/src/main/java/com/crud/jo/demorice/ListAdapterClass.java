@@ -11,9 +11,9 @@ import android.view.ViewGroup;
 public class ListAdapterClass extends BaseAdapter {
 
     Context context;
-    List<Student> valueList;
+    List<Rice> valueList;
 
-    public ListAdapterClass(List<Student> listValue, Context context)
+    public ListAdapterClass(List<Rice> listValue, Context context)
     {
         this.context = context;
         this.valueList = listValue;
@@ -59,7 +59,7 @@ public class ListAdapterClass extends BaseAdapter {
             viewItem = (ViewItem) convertView.getTag();
         }
 
-        viewItem.TextViewStudentName.setText(valueList.get(position).StudentName);
+        viewItem.TextViewStudentName.setText(valueList.get(position).RiceName);
 
         return convertView;
     }

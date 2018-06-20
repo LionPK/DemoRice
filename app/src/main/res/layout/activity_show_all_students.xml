@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/listview1"/>
+        android:id="@+id/rice_listview"/>
 
     <ProgressBar
         android:id="@+id/progressBar"

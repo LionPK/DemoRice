@@ -21,7 +21,7 @@ public class ShowSingleRecordActivity extends AppCompatActivity {
     ProgressDialog pDialog;
 
     // Http Url For Filter Student Data from Id Sent from previous activity.
-    String HttpURL = "http://192.168.3.107/RiceApp/Rice/android_view_api/rice_list.php";
+    String HttpURL = "www.projectricearea.com/android_view_api/rice_list.php";
 
     // Http URL for delete Already Open Student Record.
 //    String HttpUrlDeleteRecord = "http:///192.168.1.11/phpApi/DeleteStudent.php";

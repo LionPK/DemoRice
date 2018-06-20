@@ -20,9 +20,9 @@ import java.util.List;
 
 public class ShowAllStudentsActivity extends AppCompatActivity {
 
-    ListView StudentListView;
+    ListView RiceListView;
     ProgressBar progressBar;
-    String HttpUrl = "http://192.168.3.107/RiceApp/Rice/android_view_api/rice_list.php";
+    String HttpUrl = "www.projectricearea.com/android_view_api/rice_list.php";
     List<String> IdList = new ArrayList<>();
 
 
@@ -31,14 +31,14 @@ public class ShowAllStudentsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_all_students);
 
-        StudentListView = (ListView)findViewById(R.id.listview1);
+        RiceListView = (ListView)findViewById(R.id.rice_listview);
 
         progressBar = (ProgressBar)findViewById(R.id.progressBar);
 
         new GetHttpResponse(ShowAllStudentsActivity.this).execute();
 
         //Adding ListView Item click Listener.
-        StudentListView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        RiceListView.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -66,7 +66,7 @@ public class ShowAllStudentsActivity extends AppCompatActivity {
 
         String JSonResult;
 
-        List<Student> studentList;
+        List<Rice> RiceList;
 
         public GetHttpResponse(Context context)
         {
@@ -101,13 +101,13 @@ public class ShowAllStudentsActivity extends AppCompatActivity {
 
                             JSONObject jsonObject;
 
-                            Student student;
+                            Rice Rice;
 
-                            studentList = new ArrayList<Student>();
+                            RiceList = new ArrayList<Rice>();
 
                             for(int i=0; i<jsonArray.length(); i++)
                             {
-                                student = new Student();
+                                Rice = new Rice();
 
                                 jsonObject = jsonArray.getJSONObject(i);
 
@@ -115,9 +115,9 @@ public class ShowAllStudentsActivity extends AppCompatActivity {
                                 IdList.add(jsonObject.getString("id").toString());
 
                                 //Adding Student Name.
-                                student.StudentName = jsonObject.getString("name").toString();
+                                Rice.RiceName = jsonObject.getString("name").toString();
 
-                                studentList.add(student);
+                                RiceList.add(Rice);
 
                             }
                         }
@@ -146,11 +146,11 @@ public class ShowAllStudentsActivity extends AppCompatActivity {
         {
             progressBar.setVisibility(View.GONE);
 
-            StudentListView.setVisibility(View.VISIBLE);
+            RiceListView.setVisibility(View.VISIBLE);
 
-            ListAdapterClass adapter = new ListAdapterClass(studentList, context);
+            ListAdapterClass adapter = new ListAdapterClass(RiceList, context);
 
-            StudentListView.setAdapter(adapter);
+            RiceListView.setAdapter(adapter);
 
         }
     }

@@ -39,15 +39,8 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".RegisterActivity" />
-<<<<<<< HEAD
         <activity android:name=".DisplayUserDataActivity"></activity>
-        <activity android:name=".RiceActivity"></activity>
-        <activity android:name=".ShowAllStudentsActivity" />
-        <activity android:name=".ShowSingleRecordActivity"></activity>
-=======
-        <activity android:name=".DisplayUserDataActivity" />
         <activity android:name=".Rice_view"></activity>
->>>>>>> c63cc13240644210f1c73eb32f19719bec651dfe
     </application>
 
 </manifest>

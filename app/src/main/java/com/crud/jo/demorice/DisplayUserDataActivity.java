@@ -44,6 +44,10 @@ public class DisplayUserDataActivity extends AppCompatActivity {
         HashMap<String, String> user = db.getUserDetails();
 
         String name = user.get("name");
+//        String first_name = user.get("first_name");
+//        String last_name = user.get("last_name");
+//        String sex = user.get("sex");
+//        String work = user.get("work");
         String email = user.get("email");
 
         // Displaying the user details on the screen

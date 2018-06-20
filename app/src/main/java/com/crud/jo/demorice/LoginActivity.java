@@ -48,17 +48,17 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = (Button) findViewById(R.id.login_button);
         btnLinkToRegister = (Button) findViewById(R.id.register_button);
 
-        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_login) ;
-        setSupportActionBar(toolbar);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),
-                        MainActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
+//        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_login) ;
+//        setSupportActionBar(toolbar);
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(getApplicationContext(),
+//                        MainActivity.class);
+//                startActivity(i);
+//                finish();
+//            }
+//        });
 
         // Progress dialog
         pDialog = new ProgressDialog(this);
@@ -110,32 +110,32 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (email.isEmpty() && !password.isEmpty()) {
 //                    Toast.makeText(getApplicationContext(),"กรุณากรอกข้อมูล!", Toast.LENGTH_LONG).show();
-                    eError.setError(getString(R.string.eye_error_not_enter_email));
+                    eError.setError(getString(R.string.rice_error_not_enter_email));
 
                 }else if ((!email.isEmpty() && !email.matches(emailPattern)) && password.isEmpty()) {
-                    eError.setError(getString(R.string.eye_error_not_match_email));
-                    pError.setError(getString(R.string.eye_error_not_enter_password));
+                    eError.setError(getString(R.string.rice_error_not_match_email));
+                    pError.setError(getString(R.string.rice_error_not_enter_password));
 
                 }else if (password.isEmpty() && !email.isEmpty()) {
-                    pError.setError(getString(R.string.eye_error_not_enter_password));
+                    pError.setError(getString(R.string.rice_error_not_enter_password));
 
                 }else if ((!password.isEmpty() && password.length() < 8) && email.isEmpty()) {
-                    pError.setError(getString(R.string.eye_error_password_less));
-                    eError.setError(getString(R.string.eye_error_not_enter_email));
+                    pError.setError(getString(R.string.rice_error_password_less));
+                    eError.setError(getString(R.string.rice_error_not_enter_email));
 
                 }else if (email.isEmpty() && password.isEmpty()) {
-                    eError.setError(getString(R.string.eye_error_not_enter_email));
-                    pError.setError(getString(R.string.eye_error_not_enter_password));
+                    eError.setError(getString(R.string.rice_error_not_enter_email));
+                    pError.setError(getString(R.string.rice_error_not_enter_password));
 
                 }else if ((!email.isEmpty() && !email.matches(emailPattern)) && (!password.isEmpty() && password.length() < 8)) {
-                    eError.setError(getString(R.string.eye_error_not_match_email));
-                    pError.setError(getString(R.string.eye_error_password_less));
+                    eError.setError(getString(R.string.rice_error_not_match_email));
+                    pError.setError(getString(R.string.rice_error_password_less));
 
                 }else if ((!email.isEmpty() && !email.matches(emailPattern)) && (!password.isEmpty() && password.length() >= 8)) {
-                    eError.setError(getString(R.string.eye_error_not_match_email));
+                    eError.setError(getString(R.string.rice_error_not_match_email));
 
                 }else if ((!email.isEmpty() && email.matches(emailPattern)) && (!password.isEmpty() && password.length() < 8)) {
-                    pError.setError(getString(R.string.eye_error_password_less));
+                    pError.setError(getString(R.string.rice_error_password_less));
 
                 }else if ((!email.isEmpty() && email.matches(emailPattern)) && (!password.isEmpty() && password.length() >= 8)) {
                     // login user
@@ -186,17 +186,20 @@ public class LoginActivity extends AppCompatActivity {
                         // Create login session
                         session.setLogin(true);
 
-                        // Now store the user in SQLite
+                        // Now store the users in SQLite
                         String uid = jObj.getString("uid");
 
                         JSONObject user = jObj.getJSONObject("user");
                         String name = user.getString("name");
+                        String first_name = user.getString("first_name");
+                        String last_name = user.getString("last_name");
+                        String sex = user.getString("sex");
+                        String work = user.getString("work");
                         String email = user.getString("email");
-                        String created_at = user
-                                .getString("created_at");
+                        String created_at = user.getString("created_at");
 
-                        // Inserting row in users table
-                        db.addUser(name, email, uid, created_at);
+                        // Inserting row in user table
+                        db.addUser(name, first_name, last_name, sex, work, email, uid, created_at);
 
                         // Launch main activity
                         Intent intent = new Intent(LoginActivity.this,

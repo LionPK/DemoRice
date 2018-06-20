@@ -2,10 +2,12 @@ package com.crud.jo.demorice;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -46,6 +48,18 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = (Button) findViewById(R.id.login_button);
         btnLinkToRegister = (Button) findViewById(R.id.register_button);
 
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_login) ;
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),
+                        MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
         // Progress dialog
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
@@ -72,14 +86,60 @@ public class LoginActivity extends AppCompatActivity {
                 String password = inputPassword.getText().toString().trim();
 
                 // Check for empty data in the form
-                if (!email.isEmpty() && !password.isEmpty()) {
+//                if (!email.isEmpty() && !password.isEmpty()) {
+//                    // login user
+//                    checkLogin(email, password);
+//                } else {
+//                    // Prompt user to enter credentials
+//                    Toast.makeText(getApplicationContext(),
+//                            "Please enter the credentials!", Toast.LENGTH_LONG)
+//                            .show();
+//                }
+
+                String emailPattern = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"" +
+                        "(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])" +
+                        "*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]" +
+                        "|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:" +
+                        "(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])";
+
+                final TextInputLayout eError = findViewById(R.id.email_text_input);
+                final TextInputLayout pError = findViewById(R.id.password_text_input);
+
+                eError.setError(null);
+                pError.setError(null);
+
+                if (email.isEmpty() && !password.isEmpty()) {
+//                    Toast.makeText(getApplicationContext(),"กรุณากรอกข้อมูล!", Toast.LENGTH_LONG).show();
+                    eError.setError(getString(R.string.eye_error_not_enter_email));
+
+                }else if ((!email.isEmpty() && !email.matches(emailPattern)) && password.isEmpty()) {
+                    eError.setError(getString(R.string.eye_error_not_match_email));
+                    pError.setError(getString(R.string.eye_error_not_enter_password));
+
+                }else if (password.isEmpty() && !email.isEmpty()) {
+                    pError.setError(getString(R.string.eye_error_not_enter_password));
+
+                }else if ((!password.isEmpty() && password.length() < 8) && email.isEmpty()) {
+                    pError.setError(getString(R.string.eye_error_password_less));
+                    eError.setError(getString(R.string.eye_error_not_enter_email));
+
+                }else if (email.isEmpty() && password.isEmpty()) {
+                    eError.setError(getString(R.string.eye_error_not_enter_email));
+                    pError.setError(getString(R.string.eye_error_not_enter_password));
+
+                }else if ((!email.isEmpty() && !email.matches(emailPattern)) && (!password.isEmpty() && password.length() < 8)) {
+                    eError.setError(getString(R.string.eye_error_not_match_email));
+                    pError.setError(getString(R.string.eye_error_password_less));
+
+                }else if ((!email.isEmpty() && !email.matches(emailPattern)) && (!password.isEmpty() && password.length() >= 8)) {
+                    eError.setError(getString(R.string.eye_error_not_match_email));
+
+                }else if ((!email.isEmpty() && email.matches(emailPattern)) && (!password.isEmpty() && password.length() < 8)) {
+                    pError.setError(getString(R.string.eye_error_password_less));
+
+                }else if ((!email.isEmpty() && email.matches(emailPattern)) && (!password.isEmpty() && password.length() >= 8)) {
                     // login user
                     checkLogin(email, password);
-                } else {
-                    // Prompt user to enter credentials
-                    Toast.makeText(getApplicationContext(),
-                            "Please enter the credentials!", Toast.LENGTH_LONG)
-                            .show();
                 }
             }
 

@@ -40,7 +40,6 @@
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".DisplayUserDataActivity"></activity>
-        <activity android:name=".Rice_view"></activity>
     </application>
 
 </manifest>

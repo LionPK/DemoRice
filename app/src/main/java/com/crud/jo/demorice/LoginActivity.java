@@ -48,17 +48,17 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = (Button) findViewById(R.id.login_button);
         btnLinkToRegister = (Button) findViewById(R.id.register_button);
 
-//        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_login) ;
-//        setSupportActionBar(toolbar);
-//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(getApplicationContext(),
-//                        MainActivity.class);
-//                startActivity(i);
-//                finish();
-//            }
-//        });
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_login) ;
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),
+                        MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
         // Progress dialog
         pDialog = new ProgressDialog(this);

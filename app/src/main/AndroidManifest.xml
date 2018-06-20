@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.crud.jo.demorice">
 
+
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -13,6 +15,7 @@
     <uses-permission
         android:name="android.permission.PACKAGE_USAGE_STATS"
         tools:ignore="ProtectedPermissions" />
+
 
     <application
         android:name=".app.AppController"
@@ -39,7 +42,15 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".RegisterActivity" />
+<<<<<<< HEAD
         <activity android:name=".DisplayUserDataActivity"></activity>
+=======
+
+        <activity android:name=".DisplayUserDataActivity" />
+
+        <activity android:name=".Main"></activity>
+
+>>>>>>> 951c9a158b5df5351e3a0f6446818cbd36414695
     </application>
 
 </manifest>

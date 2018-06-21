@@ -71,25 +71,22 @@ public class Main extends AppCompatActivity {
 
             if (jsonStr != null) {
                 try {
-                    JSONObject jsonObj = new JSONObject(jsonStr);
+//                    JSONObject jsonObj = new JSONObject(jsonStr);
 
                     // Getting JSON Array node
-                    JSONArray contacts = jsonObj.getJSONArray("contacts");
+//                    JSONArray contacts = jsonObj.getJSONArray(0);
+
+                    JSONArray mJsonArray = new JSONArray(jsonStr);
+//                    JSONObject mJsonObject = mJsonArray.getJSONObject(0);
 
                     // looping through All Contacts
-                    for (int i = 0; i < contacts.length(); i++) {
-                        JSONObject c = contacts.getJSONObject(i);
+                    for (int i = 0; i < mJsonArray.length(); i++) {
+                        JSONObject c = mJsonArray.getJSONObject(i);
 
                         String id_rice = c.getString("id_rice");
                         String name_rice = c.getString("name_rice");
                         String type_rice = c.getString("type_rice");
                         String detail_rice = c.getString("detail_rice");
-
-//                        // Phone node is JSON Object
-//                        JSONObject phone = c.getJSONObject("phone");
-//                        String mobile = phone.getString("mobile");
-//                        String type = phone.getString("type");
-//                        String detail = phone.getString("detail");
 
                         // tmp hash map for single contact
                         HashMap<String, String> contact = new HashMap<>();
@@ -144,8 +141,8 @@ public class Main extends AppCompatActivity {
              * */
             ListAdapter adapter = new SimpleAdapter(
                     Main.this, contactList,
-                    R.layout.list_item, new String[]{"name", "type",
-                    "detail"}, new int[]{R.id.name,
+                    R.layout.list_item, new String[]{"name_rice", "type_rice",
+                    "detail_rice"}, new int[]{R.id.name,
                     R.id.type, R.id.detail});
 
             lv.setAdapter(adapter);

@@ -4,6 +4,138 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Users_Main">
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <TableRow
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:background="#bde0ec"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/logo" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/title" />
+        </TableRow>
+
+        <TextView
+            android:id="@+id/space2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_rice"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/rice_p" />
+
+                <ImageButton
+                    android:id="@+id/btn_pest"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/pest_p" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/space3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_soil"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/soil_p" />
+
+                <ImageButton
+                    android:id="@+id/btn_fertilizer"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/fertilizer_p" />
+
+            </TableRow>
+
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/space4"
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
+
+        <TextView
+            android:id="@+id/space5"
+            android:layout_width="300dp"
+            android:layout_height="3dp"
+            android:background="@android:color/background_light"
+            android:textAlignment="textStart"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="501dp" />
+
+        <TextView
+            android:id="@+id/space6"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TableRow
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="516dp">
+
+        </TableRow>
+
+    </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>

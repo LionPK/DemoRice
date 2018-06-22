@@ -15,6 +15,12 @@ public class MainActivity extends AppCompatActivity {
     private Button btnLoginLink;
     private Button btnRegisterLink;
     private ImageButton ricebtn;
+    private ImageButton btn_pest;
+    private ImageButton btn_soil;
+    private ImageButton btn_fertilizer;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +29,9 @@ public class MainActivity extends AppCompatActivity {
         btnLoginLink = (Button) findViewById(R.id.btnLogin);
         btnRegisterLink = (Button) findViewById(R.id.btnRegister);
         ricebtn = (ImageButton) findViewById(R.id.btn_rice);
-
+        btn_pest = (ImageButton) findViewById(R.id.btn_pest);
+        btn_soil = (ImageButton) findViewById(R.id.btn_soil);
+        btn_fertilizer = (ImageButton) findViewById(R.id.btn_fertilizer);
         //link to Sign In
         btnLoginLink.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -54,8 +62,38 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-    }}
-        //link to menurice
+
+        btn_pest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,
+                        weed_list.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        btn_soil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,
+                        soil_list.class);
+                startActivity(i);
+                finish();
+            }
+        });
+        btn_fertilizer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,
+                        ferilizer_list.class);
+                startActivity(i);
+                finish();
+            }
+        });
+    }
+}
+//link to menurice
 //        ricebtn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {

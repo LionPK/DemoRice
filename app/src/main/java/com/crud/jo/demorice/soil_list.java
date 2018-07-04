@@ -1,10 +1,13 @@
 package com.crud.jo.demorice;
 
         import android.app.ProgressDialog;
+        import android.content.Intent;
         import android.os.AsyncTask;
         import android.os.Bundle;
         import android.support.v7.app.AppCompatActivity;
+        import android.support.v7.widget.Toolbar;
         import android.util.Log;
+        import android.view.View;
         import android.widget.ListAdapter;
         import android.widget.ListView;
         import android.widget.SimpleAdapter;
@@ -42,14 +45,14 @@ public class soil_list extends AppCompatActivity {
         lv = (ListView) findViewById(R.id.list);
         new soil_list.GetContacts().execute();
 
-
     }
+
+
+
     /**
      * Async task class to get json by making HTTP call
      */
     private class GetContacts extends AsyncTask<Void, Void, Void> {
-
-
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -60,6 +63,8 @@ public class soil_list extends AppCompatActivity {
             pDialog.show();
 
         }
+
+
 
         @Override
         protected Void doInBackground(Void... arg0) {
@@ -146,6 +151,6 @@ public class soil_list extends AppCompatActivity {
 
             lv.setAdapter(adapter);
         }
-
     }
+
 }

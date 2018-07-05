@@ -1,10 +1,13 @@
 package com.crud.jo.demorice;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -24,9 +27,12 @@ import java.util.HashMap;
 public class Main extends AppCompatActivity {
 
     private String TAG = Main.class.getSimpleName();
-
     private ProgressDialog pDialog;
     private ListView lv;
+//    private Button btnlinktoolbar_back;
+
+
+
 
     // URL to get contacts JSON
     private static String url = "http://www.projectricearea.com/android_view_api/rice_list.php";
@@ -39,11 +45,22 @@ public class Main extends AppCompatActivity {
         setContentView(R.layout.main);
 
         contactList = new ArrayList<>();
+//        btnlinktoolbar_back = (Button) findViewById(R.id.toolbar_back);
 
         lv = (ListView) findViewById(R.id.list);
         new GetContacts().execute();
 
     }
+    //link to Sign In
+//        btnlinktoolbar_back.setOnClickListener(new View.OnClickListener() {
+//        public void onClick(View view) {
+//            Intent i = new Intent(Main.this,
+//                    Users_Main.class);
+//            startActivity(i);
+//            finish();
+//        }
+//    });
+
     /**
      * Async task class to get json by making HTTP call
      */
@@ -87,11 +104,13 @@ public class Main extends AppCompatActivity {
                         String name_rice = c.getString("name_rice");
                         String type_rice = c.getString("type_rice");
                         String detail_rice = c.getString("detail_rice");
+                        String rice_img = c.getString("rice_img");
 
                         // tmp hash map for single contact
                         HashMap<String, String> contact = new HashMap<>();
 
                         // adding each child node to HashMap key => value
+                        contact.put("rice_img", rice_img);
                         contact.put("id_rice", id_rice);
                         contact.put("name_rice", name_rice);
                         contact.put("type_rice", type_rice);
@@ -142,11 +161,12 @@ public class Main extends AppCompatActivity {
             ListAdapter adapter = new SimpleAdapter(
                     Main.this, contactList,
                     R.layout.list_item, new String[]{"name_rice", "type_rice",
-                    "detail_rice"}, new int[]{R.id.name,
+                    "detail_rice" , "rice_img"}, new int[]{R.id.name,
                     R.id.type, R.id.detail});
 
             lv.setAdapter(adapter);
         }
 
     }
+
 }

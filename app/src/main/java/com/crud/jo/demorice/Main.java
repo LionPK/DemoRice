@@ -2,16 +2,22 @@ package com.crud.jo.demorice;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,6 +35,7 @@ public class Main extends AppCompatActivity {
     private String TAG = Main.class.getSimpleName();
     private ProgressDialog pDialog;
     private ListView lv;
+//    private ImageView iv;
 //    private Button btnlinktoolbar_back;
 
 
@@ -110,11 +117,11 @@ public class Main extends AppCompatActivity {
                         HashMap<String, String> contact = new HashMap<>();
 
                         // adding each child node to HashMap key => value
-                        contact.put("rice_img", rice_img);
                         contact.put("id_rice", id_rice);
                         contact.put("name_rice", name_rice);
                         contact.put("type_rice", type_rice);
                         contact.put("detail_rice", detail_rice);
+                        contact.put("rice_img", rice_img);
 
                         // adding contact to contact list
                         contactList.add(contact);
@@ -158,11 +165,12 @@ public class Main extends AppCompatActivity {
             /**
              * Updating parsed JSON data into ListView
              * */
+
             ListAdapter adapter = new SimpleAdapter(
                     Main.this, contactList,
                     R.layout.list_item, new String[]{"name_rice", "type_rice",
                     "detail_rice" , "rice_img"}, new int[]{R.id.name,
-                    R.id.type, R.id.detail});
+                    R.id.type, R.id.detail , R.id.img_rice});
 
             lv.setAdapter(adapter);
         }

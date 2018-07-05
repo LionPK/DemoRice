@@ -36,6 +36,7 @@ dependencies {
     // Add this line for firebase notification
     implementation 'com.google.firebase:firebase-core:16.0.0'
     implementation "com.google.firebase:firebase-messaging:17.0.0"
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])

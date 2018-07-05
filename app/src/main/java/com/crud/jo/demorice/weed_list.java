@@ -145,7 +145,7 @@ public class weed_list extends AppCompatActivity {
                     weed_list.this, contactList,
                     R.layout.list_weed, new String[]{"name_weed", "type_weed",
                     "detail_weed"}, new int[]{R.id.name_weed,
-                    R.id.type, R.id.detail_weed});
+                    R.id.type_weed, R.id.detail_weed});
 
             lv.setAdapter(adapter);
         }

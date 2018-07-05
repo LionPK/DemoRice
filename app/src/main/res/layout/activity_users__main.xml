@@ -7,7 +7,9 @@
     android:background="@drawable/background"
     tools:context=".MainActivity">
 
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -101,6 +103,39 @@
                     android:background="@drawable/fertilizer_p" />
 
             </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/space3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    tools:ignore="DuplicateIds" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_analyst"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/analyst" />
+
+                <ImageButton
+                    android:id="@+id/btn_user"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/user" />
+
+            </TableRow>
+
+
 
         </TableLayout>
 
@@ -125,17 +160,36 @@
             android:layout_width="match_parent"
             android:layout_height="10dp" />
 
-        <TableRow
-            android:layout_width="300dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center_horizontal"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="42dp"
-            tools:layout_editor_absoluteY="516dp">
+        <!--<TableRow-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--tools:ignore="MissingConstraints"-->
+            <!--tools:layout_editor_absoluteX="42dp"-->
+            <!--tools:layout_editor_absoluteY="516dp">-->
 
-        </TableRow>
+            <!--<Button-->
+                <!--android:id="@+id/btnLogin"-->
+                <!--style="@style/btn_main"-->
+                <!--android:fontFamily="@font/kanit_bold"-->
+                <!--android:text="เข้าสู่ระบบ"-->
+                <!--android:textSize="12sp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/textView3"-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="30dp" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/btnRegister"-->
+                <!--style="@style/btn_main"-->
+                <!--android:fontFamily="@font/kanit_bold"-->
+                <!--android:text="สมัครสมาชิก"-->
+                <!--android:textSize="12sp" />-->
+        <!--</TableRow>-->
 
     </LinearLayout>
+    </ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>

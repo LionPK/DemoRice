@@ -35,7 +35,6 @@ public class SoilAdapter extends RecyclerView.Adapter<SoilAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull SoilAdapter.ViewHolder holder, int position) {
         Soil soil = soilArrayList.get(position);
         Glide.with(context).load(soil.getSoilImg()).into(holder.soilImageView);
-        holder.IdSoilView.setText(soil.getIdSoil());
         holder.detailTextView.setText(soil.getDetailSoil());
         holder.typeTextView.setText(soil.getTypeSoil());
     }
@@ -47,14 +46,12 @@ public class SoilAdapter extends RecyclerView.Adapter<SoilAdapter.ViewHolder> {
 
     class ViewHolder extends RecyclerView.ViewHolder {
         ImageView soilImageView;
-        TextView IdSoilView;
         TextView typeTextView;
         TextView detailTextView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             soilImageView = itemView.findViewById(R.id.soilImageView);
-            IdSoilView = itemView.findViewById(R.id.IdTextView);
             typeTextView = itemView.findViewById(R.id.typeTextView);
             detailTextView = itemView.findViewById(R.id.detailTextView);
         }

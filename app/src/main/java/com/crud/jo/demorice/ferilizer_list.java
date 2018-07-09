@@ -1,12 +1,15 @@
 package com.crud.jo.demorice;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.crud.jo.demorice.adapter.FertilizerAdapter;
@@ -40,6 +43,18 @@ public class ferilizer_list  extends AppCompatActivity {
 
         lv = findViewById(R.id.list);
         new GetContacts().execute();
+
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_back) ;
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),
+                        MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
     }
     /**
      * Async task class to get json by making HTTP call

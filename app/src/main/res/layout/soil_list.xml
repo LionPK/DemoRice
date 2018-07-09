@@ -24,16 +24,6 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/IdTextView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:paddingTop="6dip"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <TextView
         android:id="@+id/typeTextView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

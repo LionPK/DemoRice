@@ -35,7 +35,6 @@ public class WeedAdapter extends RecyclerView.Adapter<WeedAdapter.ViewHolder> {
         Weed weed = weedArrayList.get(position);
         Glide.with(context).load(weed.getWeedImg()).into(holder.ImageweedView);
         holder.weenameView.setText(weed.getNameWeed());
-        holder.IdWeegView.setText(weed.getIdWeed());
         holder.typeTextView.setText(weed.getTypeWeed());
         holder.detailTextView.setText(weed.getDetailWeed());
     }
@@ -47,7 +46,6 @@ public class WeedAdapter extends RecyclerView.Adapter<WeedAdapter.ViewHolder> {
 
     class ViewHolder extends RecyclerView.ViewHolder {
         ImageView ImageweedView;
-        TextView IdWeegView;
         TextView weenameView;
         TextView typeTextView;
         TextView detailTextView;
@@ -55,7 +53,6 @@ public class WeedAdapter extends RecyclerView.Adapter<WeedAdapter.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             ImageweedView = itemView.findViewById(R.id.weedImageView);
-            IdWeegView = itemView.findViewById(R.id.idweedView);
             weenameView = itemView.findViewById(R.id.weedNameView);
             typeTextView = itemView.findViewById(R.id.type_weed);
             detailTextView = itemView.findViewById(R.id.detail_weed);

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -38,7 +39,6 @@ public class Main extends AppCompatActivity {
     private String TAG = Main.class.getSimpleName();
     private ProgressDialog pDialog;
     private RecyclerView lv;
-//    private Button btnlinktoolbar_back;
 
 
 
@@ -54,21 +54,26 @@ public class Main extends AppCompatActivity {
         setContentView(R.layout.main);
 
         contactList = new ArrayList<>();
-//        btnlinktoolbar_back = (Button) findViewById(R.id.toolbar_back);
 
         lv = findViewById(R.id.list);
         new GetContacts().execute();
 
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_back) ;
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),
+                        MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+
+
+
     }
-    //link to Sign In
-//        btnlinktoolbar_back.setOnClickListener(new View.OnClickListener() {
-//        public void onClick(View view) {
-//            Intent i = new Intent(Main.this,
-//                    Users_Main.class);
-//            startActivity(i);
-//            finish();
-//        }
-//    });
 
     /**
      * Async task class to get json by making HTTP call

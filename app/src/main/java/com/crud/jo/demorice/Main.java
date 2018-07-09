@@ -31,8 +31,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
+
 
 public class Main extends AppCompatActivity {
 

@@ -1,24 +1,21 @@
 package com.crud.jo.demorice;
 
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.widget.Toast;
 
+import com.crud.jo.demorice.adapter.FertilizerAdapter;
+import com.crud.jo.demorice.model.Fertilizer;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import java.util.ArrayList;
 
-
-        import android.app.ProgressDialog;
-        import android.os.AsyncTask;
-        import android.os.Bundle;
-        import android.support.v7.app.AppCompatActivity;
-        import android.util.Log;
-        import android.widget.ListAdapter;
-        import android.widget.ListView;
-        import android.widget.SimpleAdapter;
-        import android.widget.Toast;
-
-        import org.json.JSONArray;
-        import org.json.JSONException;
-        import org.json.JSONObject;
-
-        import java.util.ArrayList;
-        import java.util.HashMap;
 
 public class ferilizer_list  extends AppCompatActivity {
 
@@ -27,12 +24,12 @@ public class ferilizer_list  extends AppCompatActivity {
     private String TAG = ferilizer_list.class.getSimpleName();
 
     private ProgressDialog pDialog;
-    private ListView lv;
+    private RecyclerView lv;
 
     // URL to get contacts JSON
     private static String url = "http://www.projectricearea.com/android_view_api/fertilizer_list.php";
 
-    ArrayList<HashMap<String, String>> contactList;
+    ArrayList <Fertilizer> contactList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +38,8 @@ public class ferilizer_list  extends AppCompatActivity {
 
         contactList = new ArrayList<>();
 
-        lv = (ListView) findViewById(R.id.list);
+        lv = findViewById(R.id.list);
         new GetContacts().execute();
-
     }
     /**
      * Async task class to get json by making HTTP call
@@ -76,30 +72,19 @@ public class ferilizer_list  extends AppCompatActivity {
 
                     // Getting JSON Array node
 //                    JSONArray contacts = jsonObj.getJSONArray(0);
-
                     JSONArray mJsonArray = new JSONArray(jsonStr);
 //                    JSONObject mJsonObject = mJsonArray.getJSONObject(0);
 
                     // looping through All Contacts
                     for (int i = 0; i < mJsonArray.length(); i++) {
                         JSONObject c = mJsonArray.getJSONObject(i);
+                        String img_fer = c.getString("img_fer");
+                        String id_fer = c.getString("id_fer");
+                        String name_fer = c.getString("name_fer");
+                        String type_fer = c.getString("type_fer");
+                        String detail_fer = c.getString("detail_fer");
 
-                        String id_ferilizer = c.getString("id_fer");
-                        String name_ferilizer = c.getString("name_fer");
-                        String type_ferilizer = c.getString("type_fer");
-                        String detail_ferilizer = c.getString("detail_fer");
-
-                        // tmp hash map for single contact
-                        HashMap<String, String> contact = new HashMap<>();
-
-                        // adding each child node to HashMap key => value
-                        contact.put("id_fer", id_ferilizer);
-                        contact.put("name_fer", name_ferilizer);
-                        contact.put("type_fer", type_ferilizer);
-                        contact.put("detail_fer", detail_ferilizer);
-
-                        // adding contact to contact list
-                        contactList.add(contact);
+                        contactList.add(new Fertilizer (id_fer,name_fer,type_fer,detail_fer,img_fer));
                     }
                 } catch (final JSONException e) {
                     Log.e(TAG, "Json parsing error: " + e.getMessage());
@@ -112,7 +97,6 @@ public class ferilizer_list  extends AppCompatActivity {
                                     .show();
                         }
                     });
-
                 }
             } else {
                 Log.e(TAG, "Couldn't get json from server.");
@@ -125,9 +109,7 @@ public class ferilizer_list  extends AppCompatActivity {
                                 .show();
                     }
                 });
-
             }
-
             return null;
         }
 
@@ -140,13 +122,9 @@ public class ferilizer_list  extends AppCompatActivity {
             /**
              * Updating parsed JSON data into ListView
              * */
-            ListAdapter adapter = new SimpleAdapter(
-                    ferilizer_list.this, contactList,
-                    R.layout.ferilizer_list, new String[]{"name_fer", "type_fer",
-                    "detail_fer"}, new int[]{R.id.name_fer,
-                    R.id.type_fer, R.id.detail_fer});
-
-            lv.setAdapter(adapter);
+            FertilizerAdapter fertilizerAdapter = new FertilizerAdapter(ferilizer_list.this,contactList);
+            lv.setAdapter(fertilizerAdapter);
+            lv.setLayoutManager(new LinearLayoutManager(ferilizer_list.this,LinearLayoutManager.VERTICAL,false));
         }
 
     }

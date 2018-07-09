@@ -5,7 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="@dimen/activity_horizontal_margin"
-    tools:context=".RegisterActivity">>
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/ferImageView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@color/colorPrimaryDark"
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/name_fer"

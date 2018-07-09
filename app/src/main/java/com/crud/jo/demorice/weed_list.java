@@ -4,22 +4,20 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.Toast;
+
+import com.crud.jo.demorice.adapter.WeedAdapter;
+import com.crud.jo.demorice.model.Weed;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class weed_list extends AppCompatActivity {
 
@@ -28,12 +26,12 @@ public class weed_list extends AppCompatActivity {
     private String TAG = weed_list.class.getSimpleName();
 
     private ProgressDialog pDialog;
-    private ListView lv;
+    private RecyclerView lv;
 
     // URL to get contacts JSON
     private static String url = "http://www.projectricearea.com/android_view_api/weed_list.php";
 
-    ArrayList<HashMap<String, String>> contactList;
+    ArrayList<Weed> contactList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +40,7 @@ public class weed_list extends AppCompatActivity {
 
         contactList = new ArrayList<>();
 
-        lv = (ListView) findViewById(R.id.list);
+        lv = findViewById(R.id.list);
         new GetContacts().execute();
 
     }
@@ -89,18 +87,8 @@ public class weed_list extends AppCompatActivity {
                         String name_weed = c.getString("name_weed");
                         String type_weed = c.getString("type_weed");
                         String detail_weed = c.getString("detail_weed");
-
-                        // tmp hash map for single contact
-                        HashMap<String, String> contact = new HashMap<>();
-
-                        // adding each child node to HashMap key => value
-                        contact.put("id_weed", id_weed);
-                        contact.put("name_weed", name_weed);
-                        contact.put("type_weed", type_weed);
-                        contact.put("detail_weed", detail_weed);
-
-                        // adding contact to contact list
-                        contactList.add(contact);
+                        String img_weed = c.getString("img_weed");
+                        contactList.add(new Weed(id_weed,name_weed,type_weed,detail_weed,img_weed));
                     }
                 } catch (final JSONException e) {
                     Log.e(TAG, "Json parsing error: " + e.getMessage());
@@ -141,13 +129,9 @@ public class weed_list extends AppCompatActivity {
             /**
              * Updating parsed JSON data into ListView
              * */
-            ListAdapter adapter = new SimpleAdapter(
-                    weed_list.this, contactList,
-                    R.layout.list_weed, new String[]{"name_weed", "type_weed",
-                    "detail_weed"}, new int[]{R.id.name_weed,
-                    R.id.type_weed, R.id.detail_weed});
-
-            lv.setAdapter(adapter);
+            WeedAdapter WeedAdapter = new WeedAdapter(weed_list.this,contactList);
+            lv.setAdapter(WeedAdapter);
+            lv.setLayoutManager(new LinearLayoutManager(weed_list.this,LinearLayoutManager.VERTICAL,false));
         }
 
     }

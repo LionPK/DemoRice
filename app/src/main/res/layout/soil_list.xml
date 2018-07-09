@@ -6,10 +6,15 @@
     android:orientation="vertical"
     android:padding="@dimen/activity_horizontal_margin">
 
-
+    <ImageView
+        android:id="@+id/soilImageView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@color/colorPrimaryDark"
+        android:scaleType="centerCrop" />
 
     <TextView
-        android:id="@+id/name_soil"
+        android:id="@+id/NameTextView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="2dip"
@@ -19,16 +24,27 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/type_soil"
+        android:id="@+id/IdTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/typeTextView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="2dip"
         android:textColor="@color/colorAccent" />
 
     <TextView
-        android:id="@+id/detail_soil"
+        android:id="@+id/detailTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#5d5d5d"
         android:textStyle="bold" />
+
 </LinearLayout>

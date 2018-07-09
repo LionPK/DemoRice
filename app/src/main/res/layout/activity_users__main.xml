@@ -59,13 +59,13 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/btn_rice"
+                    android:id="@+id/btn_rice_member"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:background="@drawable/rice_p" />
 
                 <ImageButton
-                    android:id="@+id/btn_pest"
+                    android:id="@+id/btn_pest_member"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:background="@drawable/pest_p" />
@@ -91,13 +91,13 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/btn_soil"
+                    android:id="@+id/btn_soil_member"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:background="@drawable/soil_p" />
 
                 <ImageButton
-                    android:id="@+id/btn_fertilizer"
+                    android:id="@+id/btn_fertilizer_member"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:background="@drawable/fertilizer_p" />
@@ -122,13 +122,13 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/btn_analyst"
+                    android:id="@+id/btn_analyst_member"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:background="@drawable/analyst" />
 
                 <ImageButton
-                    android:id="@+id/btn_user"
+                    android:id="@+id/btn_user_member"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:background="@drawable/user" />

@@ -13,7 +13,7 @@ public class Users_Main extends AppCompatActivity {
     private ImageButton btn_fertilizer_member;
     private ImageButton btn_analyst_member;
     private ImageButton btn_user_member;
-
+    private ImageButton btn_weather_member;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class Users_Main extends AppCompatActivity {
         btn_fertilizer_member = (ImageButton) findViewById(R.id.btn_fertilizer_member);
         btn_analyst_member = (ImageButton) findViewById(R.id.btn_analyst_member);
         btn_user_member = (ImageButton) findViewById(R.id.btn_user_member);
-
+        btn_weather_member = (ImageButton) findViewById(R.id.btn_weather_member);
         btn_rice_member.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -75,6 +75,15 @@ public class Users_Main extends AppCompatActivity {
             }
         });
         btn_user_member.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Users_Main.this,
+                        ferilizer_list.class);
+                startActivity(i);
+                finish();
+            }
+        });
+        btn_weather_member.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Users_Main.this,

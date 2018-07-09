@@ -50,7 +50,7 @@ public class FertilizerMember_list extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(),
-                        MainActivity.class);
+                        Users_Main.class);
                 startActivity(i);
                 finish();
             }

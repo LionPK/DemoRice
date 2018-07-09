@@ -12,8 +12,9 @@
         android:layout_height="wrap_content"
         app:title="ย้อนกลับ"
         style="@style/MyToolbar"/>
+
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/list"
+        android:id="@+id/memberlist"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
 </android.support.constraint.ConstraintLayout>

@@ -45,6 +45,10 @@ package="com.crud.jo.demorice">
     <activity android:name=".weed_list"></activity>
     <activity android:name=".soil_list"></activity>
     <activity android:name=".ferilizer_list"></activity>
+    <activity android:name=".RiceMember_list"></activity>
+    <activity android:name=".FertilizerMember_list"></activity>
+    <!--<activity android:name=".ferilizer_list"></activity>-->
+    <!--<activity android:name=".ferilizer_list"></activity>-->
 </application>
 
 </manifest>

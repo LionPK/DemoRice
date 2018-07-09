@@ -12,32 +12,34 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.crud.jo.demorice.adapter.FertilizerAdapter;
-import com.crud.jo.demorice.model.Fertilizer;
+import com.crud.jo.demorice.adapter.WeedAdapter;
+import com.crud.jo.demorice.model.Weed;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 
-public class ferilizer_list  extends AppCompatActivity {
+public class WeedMember_list extends AppCompatActivity {
 
 
 
-    private String TAG = ferilizer_list.class.getSimpleName();
+    private String TAG = WeedMember_list.class.getSimpleName();
 
     private ProgressDialog pDialog;
     private RecyclerView lv;
 
     // URL to get contacts JSON
-    private static String url = "http://www.projectricearea.com/android_view_api/fertilizer_list.php";
+    private static String url = "http://www.projectricearea.com/android_view_api/weed_list.php";
 
-    ArrayList <Fertilizer> contactList;
+    ArrayList<Weed> contactList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ferilizer_main);
+        setContentView(R.layout.weed_main);
 
         contactList = new ArrayList<>();
 
@@ -55,6 +57,7 @@ public class ferilizer_list  extends AppCompatActivity {
                 finish();
             }
         });
+
     }
     /**
      * Async task class to get json by making HTTP call
@@ -65,7 +68,7 @@ public class ferilizer_list  extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             // Showing progress dialog
-            pDialog = new ProgressDialog(ferilizer_list.this);
+            pDialog = new ProgressDialog(WeedMember_list.this);
             pDialog.setMessage("Please wait...");
             pDialog.setCancelable(false);
             pDialog.show();
@@ -87,19 +90,20 @@ public class ferilizer_list  extends AppCompatActivity {
 
                     // Getting JSON Array node
 //                    JSONArray contacts = jsonObj.getJSONArray(0);
+
                     JSONArray mJsonArray = new JSONArray(jsonStr);
 //                    JSONObject mJsonObject = mJsonArray.getJSONObject(0);
 
                     // looping through All Contacts
                     for (int i = 0; i < mJsonArray.length(); i++) {
                         JSONObject c = mJsonArray.getJSONObject(i);
-                        String img_fer = c.getString("img_fer");
-                        String id_fer = c.getString("id_fer");
-                        String name_fer = c.getString("name_fer");
-                        String type_fer = c.getString("type_fer");
-                        String detail_fer = c.getString("detail_fer");
 
-                        contactList.add(new Fertilizer (id_fer,name_fer,type_fer,detail_fer,img_fer));
+                        String id_weed = c.getString("id_weed");
+                        String name_weed = c.getString("name_weed");
+                        String type_weed = c.getString("type_weed");
+                        String detail_weed = c.getString("detail_weed");
+                        String img_weed = c.getString("img_weed");
+                        contactList.add(new Weed(id_weed,name_weed,type_weed,detail_weed,img_weed));
                     }
                 } catch (final JSONException e) {
                     Log.e(TAG, "Json parsing error: " + e.getMessage());
@@ -112,6 +116,7 @@ public class ferilizer_list  extends AppCompatActivity {
                                     .show();
                         }
                     });
+
                 }
             } else {
                 Log.e(TAG, "Couldn't get json from server.");
@@ -124,7 +129,9 @@ public class ferilizer_list  extends AppCompatActivity {
                                 .show();
                     }
                 });
+
             }
+
             return null;
         }
 
@@ -137,9 +144,9 @@ public class ferilizer_list  extends AppCompatActivity {
             /**
              * Updating parsed JSON data into ListView
              * */
-            FertilizerAdapter fertilizerAdapter = new FertilizerAdapter(ferilizer_list.this,contactList);
-            lv.setAdapter(fertilizerAdapter);
-            lv.setLayoutManager(new LinearLayoutManager(ferilizer_list.this,LinearLayoutManager.VERTICAL,false));
+            WeedAdapter WeedAdapter = new WeedAdapter(WeedMember_list.this,contactList);
+            lv.setAdapter(WeedAdapter);
+            lv.setLayoutManager(new LinearLayoutManager(WeedMember_list.this,LinearLayoutManager.VERTICAL,false));
         }
 
     }

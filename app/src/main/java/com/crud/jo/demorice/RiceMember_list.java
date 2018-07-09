@@ -11,20 +11,20 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+import com.crud.jo.demorice.adapter.Rice_Member_Adapter;
+import com.crud.jo.demorice.model.Rice;
 
-import com.crud.jo.demorice.adapter.FertilizerAdapter;
-import com.crud.jo.demorice.model.Fertilizer;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.ArrayList;
 
 
-public class ferilizer_list  extends AppCompatActivity {
+public class RiceMember_list extends AppCompatActivity {
 
 
 
-    private String TAG = ferilizer_list.class.getSimpleName();
+    private String TAG = RiceMember_list.class.getSimpleName();
 
     private ProgressDialog pDialog;
     private RecyclerView lv;
@@ -32,16 +32,15 @@ public class ferilizer_list  extends AppCompatActivity {
     // URL to get contacts JSON
     private static String url = "http://www.projectricearea.com/android_view_api/fertilizer_list.php";
 
-    ArrayList <Fertilizer> contactList;
+    ArrayList <Rice> contactList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ferilizer_main);
+        setContentView(R.layout.rice_member_list);
 
         contactList = new ArrayList<>();
-
-        lv = findViewById(R.id.list);
+        lv = findViewById(R.id.memberlist);
         new GetContacts().execute();
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_back) ;
@@ -50,7 +49,7 @@ public class ferilizer_list  extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(),
-                        MainActivity.class);
+                        Users_Main.class);
                 startActivity(i);
                 finish();
             }
@@ -65,7 +64,7 @@ public class ferilizer_list  extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             // Showing progress dialog
-            pDialog = new ProgressDialog(ferilizer_list.this);
+            pDialog = new ProgressDialog(RiceMember_list.this);
             pDialog.setMessage("Please wait...");
             pDialog.setCancelable(false);
             pDialog.show();
@@ -93,13 +92,13 @@ public class ferilizer_list  extends AppCompatActivity {
                     // looping through All Contacts
                     for (int i = 0; i < mJsonArray.length(); i++) {
                         JSONObject c = mJsonArray.getJSONObject(i);
-                        String img_fer = c.getString("img_fer");
-                        String id_fer = c.getString("id_fer");
-                        String name_fer = c.getString("name_fer");
-                        String type_fer = c.getString("type_fer");
-                        String detail_fer = c.getString("detail_fer");
+                        String id_rice = c.getString("id_rice");
+                        String name_rice = c.getString("name_rice");
+                        String type_rice = c.getString("type_rice");
+                        String detail_rice = c.getString("detail_rice");
+                        String rice_img = c.getString("rice_img");
 
-                        contactList.add(new Fertilizer (id_fer,name_fer,type_fer,detail_fer,img_fer));
+                        contactList.add(new Rice(id_rice,name_rice,type_rice,detail_rice,rice_img));
                     }
                 } catch (final JSONException e) {
                     Log.e(TAG, "Json parsing error: " + e.getMessage());
@@ -137,9 +136,9 @@ public class ferilizer_list  extends AppCompatActivity {
             /**
              * Updating parsed JSON data into ListView
              * */
-            FertilizerAdapter fertilizerAdapter = new FertilizerAdapter(ferilizer_list.this,contactList);
-            lv.setAdapter(fertilizerAdapter);
-            lv.setLayoutManager(new LinearLayoutManager(ferilizer_list.this,LinearLayoutManager.VERTICAL,false));
+            Rice_Member_Adapter rice_Member_Adapter = new Rice_Member_Adapter(RiceMember_list.this,contactList);
+            lv.setAdapter(rice_Member_Adapter);
+            lv.setLayoutManager(new LinearLayoutManager(RiceMember_list.this,LinearLayoutManager.VERTICAL,false));
         }
 
     }

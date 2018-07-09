@@ -1,40 +1,35 @@
 package com.crud.jo.demorice;
 
-        import android.app.ProgressDialog;
-        import android.content.Intent;
-        import android.os.AsyncTask;
-        import android.os.Bundle;
-        import android.support.v7.app.AppCompatActivity;
-        import android.support.v7.widget.Toolbar;
-        import android.util.Log;
-        import android.view.View;
-        import android.widget.ListAdapter;
-        import android.widget.ListView;
-        import android.widget.SimpleAdapter;
-        import android.widget.Toast;
 
-        import org.json.JSONArray;
-        import org.json.JSONException;
-        import org.json.JSONObject;
-
-        import java.util.ArrayList;
-        import java.util.HashMap;
-
-
-        import java.util.ArrayList;
-        import java.util.HashMap;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
+import com.crud.jo.demorice.adapter.SoilAdapter;
+import com.crud.jo.demorice.model.Soil;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import java.util.ArrayList;
 
 public class soil_list extends AppCompatActivity {
 
-    private String TAG = weed_list.class.getSimpleName();
+    private String TAG = soil_list.class.getSimpleName();
 
     private ProgressDialog pDialog;
-    private ListView lv;
+    private RecyclerView lv;
 
     // URL to get contacts JSON
     private static String url = "http://www.projectricearea.com/android_view_api/soil_list.php";
 
-    ArrayList<HashMap<String, String>> contactList;
+    ArrayList<Soil> contactList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +37,21 @@ public class soil_list extends AppCompatActivity {
         setContentView(R.layout.soil_main);
 
         contactList = new ArrayList<>();
-        lv = (ListView) findViewById(R.id.list);
+        lv = findViewById(R.id.list);
         new soil_list.GetContacts().execute();
+
+
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_back) ;
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),
+                        MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
     }
 
@@ -92,17 +100,8 @@ public class soil_list extends AppCompatActivity {
                         String id_soil = c.getString("id_soil");
                         String type_soil = c.getString("type_soil");
                         String detail_soil = c.getString("detail_soil");
-
-                        // tmp hash map for single contact
-                        HashMap<String, String> contact = new HashMap<>();
-
-                        // adding each child node to HashMap key => value
-                        contact.put("id_soil", id_soil);
-                        contact.put("type_soil", type_soil);
-                        contact.put("detail_soil", detail_soil);
-
-                        // adding contact to contact list
-                        contactList.add(contact);
+                        String img_soil = c.getString("img_soil");
+                        contactList.add(new Soil(id_soil,type_soil,detail_soil,img_soil));
                     }
                 } catch (final JSONException e) {
                     Log.e(TAG, "Json parsing error: " + e.getMessage());
@@ -124,33 +123,26 @@ public class soil_list extends AppCompatActivity {
                     public void run() {
                         Toast.makeText(getApplicationContext(),
                                 "Couldn't get json from server. Check LogCat for possible errors!",
-                                Toast.LENGTH_LONG)
-                                .show();
+                                Toast.LENGTH_LONG).show();
                     }
                 });
-
             }
 
             return null;
         }
 
         @Override
-        protected void onPostExecute(Void result) {
-            super.onPostExecute(result);
-            // Dismiss the progress dialog
-            if (pDialog.isShowing())
-                pDialog.dismiss();
-            /**
-             * Updating parsed JSON data into ListView
-             * */
-            ListAdapter adapter = new SimpleAdapter(
-                    soil_list.this, contactList,
-                    R.layout.soil_list, new String[]{"name_soil", "type_soil",
-                    "detail_soil"}, new int[]{R.id.name_soil,
-                    R.id.type_soil, R.id.detail_soil});
-
-            lv.setAdapter(adapter);
-        }
+    protected void onPostExecute(Void result) {
+        super.onPostExecute(result);
+        // Dismiss the progress dialog
+        if (pDialog.isShowing())
+            pDialog.dismiss();
+        /**
+         * Updating parsed JSON data into ListView
+         * */
+        SoilAdapter soilAdapter = new SoilAdapter(soil_list.this,contactList);
+        lv.setAdapter(soilAdapter);
+        lv.setLayoutManager(new LinearLayoutManager(soil_list.this,LinearLayoutManager.VERTICAL,false));
     }
-
+}
 }

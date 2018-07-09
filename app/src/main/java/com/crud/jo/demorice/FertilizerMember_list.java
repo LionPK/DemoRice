@@ -12,7 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.crud.jo.demorice.adapter.FertilizerAdapter;
+import com.crud.jo.demorice.adapter.Fertilizer_Member_Adapter;
 import com.crud.jo.demorice.model.Fertilizer;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -20,11 +20,11 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 
-public class ferilizer_list  extends AppCompatActivity {
+public class FertilizerMember_list extends AppCompatActivity {
 
 
 
-    private String TAG = ferilizer_list.class.getSimpleName();
+    private String TAG = FertilizerMember_list.class.getSimpleName();
 
     private ProgressDialog pDialog;
     private RecyclerView lv;
@@ -37,11 +37,11 @@ public class ferilizer_list  extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ferilizer_main);
+        setContentView(R.layout.fertilizer_member_list);
 
         contactList = new ArrayList<>();
 
-        lv = findViewById(R.id.list);
+        lv = findViewById(R.id.memberlist);
         new GetContacts().execute();
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_back) ;
@@ -65,7 +65,7 @@ public class ferilizer_list  extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             // Showing progress dialog
-            pDialog = new ProgressDialog(ferilizer_list.this);
+            pDialog = new ProgressDialog(FertilizerMember_list.this);
             pDialog.setMessage("Please wait...");
             pDialog.setCancelable(false);
             pDialog.show();
@@ -137,9 +137,9 @@ public class ferilizer_list  extends AppCompatActivity {
             /**
              * Updating parsed JSON data into ListView
              * */
-            FertilizerAdapter fertilizerAdapter = new FertilizerAdapter(ferilizer_list.this,contactList);
-            lv.setAdapter(fertilizerAdapter);
-            lv.setLayoutManager(new LinearLayoutManager(ferilizer_list.this,LinearLayoutManager.VERTICAL,false));
+            Fertilizer_Member_Adapter fertilizer_Member_Adapter = new Fertilizer_Member_Adapter(FertilizerMember_list.this,contactList);
+            lv.setAdapter(fertilizer_Member_Adapter);
+            lv.setLayoutManager(new LinearLayoutManager(FertilizerMember_list.this,LinearLayoutManager.VERTICAL,false));
         }
 
     }

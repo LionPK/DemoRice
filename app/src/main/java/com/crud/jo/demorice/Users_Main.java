@@ -27,6 +27,7 @@ public class Users_Main extends AppCompatActivity {
         btn_analyst_member = (ImageButton) findViewById(R.id.btn_analyst_member);
         btn_user_member = (ImageButton) findViewById(R.id.btn_user_member);
         btn_weather_member = (ImageButton) findViewById(R.id.btn_weather_member);
+
         btn_rice_member.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -83,11 +84,12 @@ public class Users_Main extends AppCompatActivity {
                 finish();
             }
         });
+
         btn_weather_member.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Users_Main.this,
-                        ferilizer_list.class);
+                        WeatherActivity.class);
                 startActivity(i);
                 finish();
             }

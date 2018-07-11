@@ -42,4 +42,23 @@
     <string name="rice_error_not_enter_work">กรุณากรอกอาชีพ</string>
 
 
+
+    <!--string for weather-->
+    <string name="app_name_weather">ตรวจสอบสภาพอากาศ</string>
+    <string name="temperature">อุณหภูมิ</string>
+    <string name="condition">เงื่อนไข</string>
+    <string name="location">ที่ตั้ง</string>
+    <string name="powered_by_yahoo">powered by Yahoo!</string>
+    <string name="condition_icon">Condition Icon</string>
+    <string name="loading">กำลังดาวน์โหลด&#8230;</string>
+    <string name="temperature_output">%1$d&#176;%2$s</string>
+    <string name="update_location">อัปเดตสถานที่</string>
+    <string name="settings">ตั้งค่าสภาพอากาศ</string>
+    <string name="cache_exception">ไม่มีข้อมูลสภาพอากาศที่แคช</string>
+    <string name="location_permission_needed">จำเป็นต้องใช้ตำแหน่งอุปกรณ์สำหรับ Weather GeoLocation</string>
+    <string name="disable_geolocation">ปรับปรุงการตั้งค่าสภาพอากาศ</string>
+    <string name="day">วัน</string>
+    <string name="high">สูง</string>
+    <string name="low">ต่ำ</string>
+
 </resources>

@@ -84,11 +84,12 @@ public class Users_Main extends AppCompatActivity {
                 finish();
             }
         });
+
         btn_weather_member.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Users_Main.this,
-                        ferilizer_list.class);
+                        WeatherActivity.class);
                 startActivity(i);
                 finish();
             }

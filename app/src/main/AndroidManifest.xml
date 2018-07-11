@@ -13,6 +13,7 @@ package="com.crud.jo.demorice">
 <uses-permission
     android:name="android.permission.PACKAGE_USAGE_STATS"
     tools:ignore="ProtectedPermissions" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
 <application
     android:name=".app.AppController"
@@ -29,18 +30,31 @@ package="com.crud.jo.demorice">
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
-    <activity android:name=".LoginActivity">
-
-        <!-- <intent-filter> -->
-        <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-        <!-- </intent-filter> -->
+    <activity
+        android:theme="@style/Weather.AppTheme"
+        android:name=".WeatherActivity"
+        android:label="@string/app_name_weather"
+        android:parentActivityName=".Users_Main">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".Users_Main" />
     </activity>
+    <activity
+        android:theme="@style/Weather.AppTheme"
+        android:name=".SettingsActivity"
+        android:label="@string/settings"
+        android:parentActivityName=".WeatherActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".WeatherActivity" />
+    </activity>
+
+
+    <activity android:name=".LoginActivity"/>
     <activity android:name=".RegisterActivity" />
     <activity android:name=".DisplayUserDataActivity" />
     <activity android:name=".Main" />
+<<<<<<< HEAD
     <activity android:name=".Users_Main"></activity>
     <activity android:name=".weed_list"></activity>
     <activity android:name=".soil_list"></activity>
@@ -49,6 +63,16 @@ package="com.crud.jo.demorice">
     <activity android:name=".FertilizerMember_list"></activity>
     <activity android:name=".WeedMember_list"></activity>
     <activity android:name=".SoilMember_list"></activity>
+=======
+    <activity android:name=".Users_Main"/>
+    <activity android:name=".weed_list"/>
+    <activity android:name=".soil_list"/>
+    <activity android:name=".ferilizer_list"/>
+    <activity android:name=".RiceMember_list"/>
+    <activity android:name=".FertilizerMember_list"/>
+    <!--<activity android:name=".ferilizer_list"></activity>-->
+    <!--<activity android:name=".ferilizer_list"></activity>-->
+>>>>>>> 7dd7bb0f04731092b28a9ec0a0b8de7f221c96fb
 </application>
 
 </manifest>

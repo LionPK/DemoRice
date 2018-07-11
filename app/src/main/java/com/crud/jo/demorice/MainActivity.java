@@ -93,14 +93,3 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-//link to menurice
-//        ricebtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent i = new Intent(MainActivity.this,
-//                        ShowAllStudentsActivity.class);
-//                startActivity(i);
-//                finish();
-//            }
-//        });
-//            setContentView(R.layout.activity_my);

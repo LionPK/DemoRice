@@ -37,14 +37,14 @@ public class FertilizerMember_list extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fertilizer_member_list);
+        setContentView(R.layout.fertilizer_member_main);
 
         contactList = new ArrayList<>();
 
         lv = findViewById(R.id.memberlist);
         new GetContacts().execute();
 
-        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_back) ;
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_backfer) ;
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

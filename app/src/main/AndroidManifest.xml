@@ -54,25 +54,14 @@ package="com.crud.jo.demorice">
     <activity android:name=".RegisterActivity" />
     <activity android:name=".DisplayUserDataActivity" />
     <activity android:name=".Main" />
-<<<<<<< HEAD
-    <activity android:name=".Users_Main"></activity>
-    <activity android:name=".weed_list"></activity>
-    <activity android:name=".soil_list"></activity>
-    <activity android:name=".ferilizer_list"></activity>
-    <activity android:name=".RiceMember_list"></activity>
-    <activity android:name=".FertilizerMember_list"></activity>
-    <activity android:name=".WeedMember_list"></activity>
-    <activity android:name=".SoilMember_list"></activity>
-=======
     <activity android:name=".Users_Main"/>
     <activity android:name=".weed_list"/>
     <activity android:name=".soil_list"/>
     <activity android:name=".ferilizer_list"/>
     <activity android:name=".RiceMember_list"/>
     <activity android:name=".FertilizerMember_list"/>
-    <!--<activity android:name=".ferilizer_list"></activity>-->
-    <!--<activity android:name=".ferilizer_list"></activity>-->
->>>>>>> 7dd7bb0f04731092b28a9ec0a0b8de7f221c96fb
+    <activity android:name=".WeedMember_list"/>
+    <activity android:name=".SoilMember_list"/>
 </application>
 
 </manifest>

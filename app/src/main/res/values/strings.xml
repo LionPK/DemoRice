@@ -42,7 +42,6 @@
     <string name="rice_error_not_enter_work">กรุณากรอกอาชีพ</string>
 
 
-
     <!--string for weather-->
     <string name="app_name_weather">ตรวจสอบสภาพอากาศ</string>
     <string name="temperature">อุณหภูมิ</string>
@@ -60,5 +59,6 @@
     <string name="day">วัน</string>
     <string name="high">สูง</string>
     <string name="low">ต่ำ</string>
+    <string name="title_activity_analysis">analysis</string>
 
 </resources>

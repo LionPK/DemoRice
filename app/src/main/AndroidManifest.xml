@@ -58,18 +58,13 @@
         <activity android:name=".ferilizer_list" />
         <activity android:name=".RiceMember_list" />
         <activity android:name=".FertilizerMember_list" />
-<<<<<<< HEAD
-        <!-- <activity android:name=".ferilizer_list"></activity> -->
-        <!-- <activity android:name=".ferilizer_list"></activity> -->
-        <activity android:name=".ShowDetailActivity"></activity>
-=======
+        <activity android:name=".ShowDetailActivity"/>
         <activity android:name=".WeedMember_list" />
         <activity android:name=".SoilMember_list" />
         <activity
             android:name=".model.analysis"
             android:label="@string/title_activity_analysis"
             android:theme="@style/AppTheme" />
->>>>>>> 8c65fa4bb69fb1d7fe747fc0eea6a0845fae1f69
     </application>
 
 </manifest>

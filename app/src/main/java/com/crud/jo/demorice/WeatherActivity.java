@@ -13,9 +13,12 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -75,6 +78,7 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
         if (preferences.getBoolean(getString(R.string.pref_needs_setup), true)) {
             startSettingsActivity();
         }
+
     }
 
     @Override

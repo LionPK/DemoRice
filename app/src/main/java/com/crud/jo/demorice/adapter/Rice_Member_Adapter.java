@@ -16,11 +16,11 @@ import java.util.ArrayList;
 public class Rice_Member_Adapter  extends RecyclerView.Adapter<Rice_Member_Adapter.ViewHolder>{
 
     private Context context;
-    private ArrayList <Rice> riceArrayList;
+    private ArrayList <Rice> riceArrayList_m;
 
     public Rice_Member_Adapter(Context context, ArrayList <Rice> riceArrayList) {
         this.context = context;
-        this.riceArrayList = riceArrayList;
+        this.riceArrayList_m = riceArrayList;
     }
 
 
@@ -33,7 +33,7 @@ public class Rice_Member_Adapter  extends RecyclerView.Adapter<Rice_Member_Adapt
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Rice rice = riceArrayList.get(position);
+        Rice rice = riceArrayList_m.get(position);
         Glide.with(context).load(rice.getRiceImg()).into(holder.riceImageView);
         holder.nameTextView.setText(rice.getNameRice());
         holder.detailTextView.setText(rice.getDetailRice());
@@ -42,7 +42,7 @@ public class Rice_Member_Adapter  extends RecyclerView.Adapter<Rice_Member_Adapt
 
     @Override
     public int getItemCount() {
-        return riceArrayList.size() != 0 ? riceArrayList.size() : 0;
+        return riceArrayList_m.size() != 0 ? riceArrayList_m.size() : 0;
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -53,10 +53,10 @@ public class Rice_Member_Adapter  extends RecyclerView.Adapter<Rice_Member_Adapt
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            riceImageView = itemView.findViewById(R.id.ferImagememberView);
-            nameTextView = itemView.findViewById(R.id.name_fermember);
-            typeTextView = itemView.findViewById(R.id.type_fermember);
-            detailTextView = itemView.findViewById(R.id.detail_fermember);
+            riceImageView = itemView.findViewById(R.id.riceImageView);
+            nameTextView = itemView.findViewById(R.id.nameTextView);
+            typeTextView = itemView.findViewById(R.id.typeTextView);
+            detailTextView = itemView.findViewById(R.id.detailTextView);
         }
     }
 }

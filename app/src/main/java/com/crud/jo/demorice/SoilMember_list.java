@@ -30,20 +30,20 @@ public class SoilMember_list extends AppCompatActivity {
     private RecyclerView lv;
 
     // URL to get contacts JSON
-    private static String url = "http://www.projectricearea.com/android_view_api/fertilizer_list.php";
+    private static String url = "http://www.projectricearea.com/android_view_api/soil_list.php";
 
     ArrayList <Soil> contactList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.soil_member_list);
+        setContentView(R.layout.soil_member_main);
 
         contactList = new ArrayList<>();
         lv = findViewById(R.id.memberlist);
         new GetContacts().execute();
 
-        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_back) ;
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_backsoil) ;
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

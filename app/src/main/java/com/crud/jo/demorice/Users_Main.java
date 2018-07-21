@@ -1,6 +1,7 @@
 package com.crud.jo.demorice;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,7 +33,7 @@ public class Users_Main extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent i = new Intent(Users_Main.this,
-                    Main.class);
+                    RiceMember_list.class);
             startActivity(i);
             finish();
         }
@@ -42,7 +43,7 @@ public class Users_Main extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent i = new Intent(Users_Main.this,
-                    weed_list.class);
+                    WeedMember_list.class);
             startActivity(i);
             finish();
         }
@@ -52,7 +53,7 @@ public class Users_Main extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent i = new Intent(Users_Main.this,
-                    soil_list.class);
+                    SoilMember_list.class);
             startActivity(i);
             finish();
         }
@@ -61,7 +62,7 @@ public class Users_Main extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent i = new Intent(Users_Main.this,
-                    ferilizer_list.class);
+                    FertilizerMember_list.class);
             startActivity(i);
             finish();
         }
@@ -79,7 +80,7 @@ public class Users_Main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Users_Main.this,
-                        ferilizer_list.class);
+                        DisplayUserDataActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -95,5 +96,7 @@ public class Users_Main extends AppCompatActivity {
             }
         });
 }
+
+
 }
 

@@ -3,6 +3,7 @@ package com.crud.jo.demorice;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -60,6 +61,18 @@ public class DisplayUserDataActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 logoutUser();
+            }
+        });
+
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_backuser) ;
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),
+                        Users_Main.class);
+                startActivity(i);
+                finish();
             }
         });
     }

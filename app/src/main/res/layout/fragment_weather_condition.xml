@@ -4,48 +4,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.WeatherConditionFragment">
+
     <ImageView
+        android:id="@+id/weatherIconImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/icon_na"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:id="@+id/weatherIconImageView"
+        android:adjustViewBounds="true"
         android:contentDescription="@string/condition_icon"
-        android:adjustViewBounds="true" />
+        app:srcCompat="@drawable/icon_na" />
 
     <TextView
+        android:id="@+id/dayTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/day"
-        android:id="@+id/dayTextView"
         android:layout_below="@+id/weatherIconImageView"
         android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:typeface="serif"
-        android:textAllCaps="true"
+        android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-condensed"
-        android:layout_marginTop="10dp" />
+        android:text="@string/day"
+        android:textAllCaps="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:typeface="serif" />
 
     <TextView
+        android:id="@+id/highTemperatureTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/high"
-        android:id="@+id/highTemperatureTextView"
         android:layout_below="@+id/dayTextView"
         android:layout_centerHorizontal="true"
-        android:paddingTop="5dp" />
+        android:paddingTop="5dp"
+        android:text="@string/high"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
+        android:id="@+id/lowTemperatureTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/low"
-        android:id="@+id/lowTemperatureTextView"
         android:layout_below="@+id/highTemperatureTextView"
         android:layout_centerHorizontal="true"
+        android:text="@string/low"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/light_text" />
 </RelativeLayout>

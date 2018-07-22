@@ -1,6 +1,7 @@
 package com.crud.jo.demorice.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.crud.jo.demorice.R;
+import com.crud.jo.demorice.ShowSoilDetailActivity;
+import com.crud.jo.demorice.ShowWeedDetailActivity;
 import com.crud.jo.demorice.model.Soil;
 
 import java.util.ArrayList;
@@ -37,6 +40,17 @@ public class SoilAdapter extends RecyclerView.Adapter<SoilAdapter.ViewHolder> {
         Glide.with(context).load(soil.getSoilImg()).into(holder.soilImageView);
         holder.detailTextView.setText(soil.getDetailSoil());
         holder.typeTextView.setText(soil.getTypeSoil());
+
+        final String detailSoil = soil.getDetailSoil();
+        final String Type = soil.getTypeSoil();
+        final String img_image = soil.getSoilImg();
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDetailActivity(Type,detailSoil,img_image);
+            }
+        });
     }
 
     @Override
@@ -55,6 +69,15 @@ public class SoilAdapter extends RecyclerView.Adapter<SoilAdapter.ViewHolder> {
             typeTextView = itemView.findViewById(R.id.typeTextView);
             detailTextView = itemView.findViewById(R.id.detailTextView);
         }
+    }
+    private void openDetailActivity(String... details) {
+
+        Intent intent = new Intent(context, ShowSoilDetailActivity.class);
+        intent.putExtra("type", details[0]);
+        intent.putExtra("detail", details[1]);
+        intent.putExtra("soil_image", details[2]);
+
+        context.startActivity(intent);
     }
 }
 

@@ -7,12 +7,13 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".model.analysis"
     tools:showIn="@layout/activity_analysis">
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_back"
+        style="@style/MyToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="ย้อนกลับ"
-        style="@style/MyToolbar"/>
+        app:title="ย้อนกลับ" />
 
     <Spinner
         android:id="@+id/spinner"

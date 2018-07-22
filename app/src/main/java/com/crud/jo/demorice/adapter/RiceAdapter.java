@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.crud.jo.demorice.R;
-import com.crud.jo.demorice.ShowDetailActivity;
+import com.crud.jo.demorice.ShowRiceDetailActivity;
 import com.crud.jo.demorice.model.Rice;
 
 import java.util.ArrayList;
@@ -76,7 +76,7 @@ public class RiceAdapter extends RecyclerView.Adapter<RiceAdapter.ViewHolder> {
 
     private void openDetailActivity(String... details) {
 
-        Intent intent = new Intent(context, ShowDetailActivity.class);
+        Intent intent = new Intent(context, ShowRiceDetailActivity.class);
         intent.putExtra("name", details[0]);
         intent.putExtra("detail", details[1]);
         intent.putExtra("rice_image", details[2]);

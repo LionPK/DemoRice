@@ -53,18 +53,25 @@
         <activity android:name=".DisplayUserDataActivity" />
         <activity android:name=".Main" />
         <activity android:name=".Users_Main" />
-        <activity android:name=".weed_list" />
+        <activity android:name=".Weed_main" />
         <activity android:name=".soil_list" />
         <activity android:name=".ferilizer_list" />
         <activity android:name=".RiceMember_list" />
         <activity android:name=".FertilizerMember_list" />
-        <activity android:name=".ShowDetailActivity"/>
+        <activity android:name=".ShowRiceDetailActivity" />
         <activity android:name=".WeedMember_list" />
         <activity android:name=".SoilMember_list" />
         <activity
             android:name=".model.analysis"
             android:label="@string/title_activity_analysis"
             android:theme="@style/AppTheme" />
+        <activity android:name=".ShowWeedDetailActivity" />
+        <activity android:name=".ShowSoilDetailActivity" />
+        <activity android:name=".ShowFertilizerDetailActivity" />
+        <activity android:name=".ShowRiceMemberDetailActivity" />
+        <activity android:name=".ShowWeedMemberDetailActivity" />
+        <activity android:name=".ShowSoilMemberDetailActivity" />
+        <activity android:name=".ShowFertilizerMemberDetailActivity"></activity>
     </application>
 
 </manifest>

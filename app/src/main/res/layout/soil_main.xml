@@ -10,12 +10,12 @@
         android:id="@+id/toolbar_back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="ย้อนกลับ"
+        app:title="แสดงรายการดิน"
         style="@style/MyToolbar"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/list"
-        android:layout_marginTop="52dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_marginTop="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </android.support.constraint.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.crud.jo.demorice.adapter;
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.crud.jo.demorice.R;
+import com.crud.jo.demorice.ShowWeedMemberDetailActivity;
 import com.crud.jo.demorice.model.Weed;
 
 import java.util.ArrayList;
@@ -37,6 +39,17 @@ public class Weed_Member_Adapter extends RecyclerView.Adapter<Weed_Member_Adapte
         holder.weenameView.setText(weed.getNameWeed());
         holder.typeTextView.setText(weed.getTypeWeed());
         holder.detailTextView.setText(weed.getDetailWeed());
+
+        final String name = weed.getNameWeed();
+        final String detail = weed.getDetailWeed();
+        final String weed_image = weed.getWeedImg();
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDetailActivity(name, detail, weed_image);
+            }
+        });
     }
 
     @Override
@@ -57,5 +70,15 @@ public class Weed_Member_Adapter extends RecyclerView.Adapter<Weed_Member_Adapte
             typeTextView = itemView.findViewById(R.id.type_weed);
             detailTextView = itemView.findViewById(R.id.detail_weed);
         }
+    }
+
+    private void openDetailActivity(String... details) {
+
+        Intent intent = new Intent(context, ShowWeedMemberDetailActivity.class);
+        intent.putExtra("name", details[0]);
+        intent.putExtra("detail", details[1]);
+        intent.putExtra("weed_image", details[2]);
+
+        context.startActivity(intent);
     }
 }

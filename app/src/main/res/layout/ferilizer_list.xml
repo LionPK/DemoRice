@@ -37,7 +37,7 @@
                 <TextView
                     android:id="@+id/type_fer"
                     android:layout_width="match_parent"
-                    android:layout_height="17dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
@@ -50,7 +50,7 @@
                 <TextView
                     android:id="@+id/name_fer"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="49dp"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"

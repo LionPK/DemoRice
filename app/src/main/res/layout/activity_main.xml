@@ -10,6 +10,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -104,25 +105,24 @@
 
                 </TableRow>
                 <!--<TableRow-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:gravity="center_horizontal"-->
-                    <!--android:orientation="vertical">-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:orientation="vertical">-->
 
-                    <!--<ImageButton-->
-                        <!--android:id="@+id/btn_analyst"-->
-                        <!--android:layout_width="120dp"-->
-                        <!--android:layout_height="120dp"-->
-                        <!--android:background="@drawable/analyst" />-->
+                <!--<ImageButton-->
+                <!--android:id="@+id/btn_analyst"-->
+                <!--android:layout_width="120dp"-->
+                <!--android:layout_height="120dp"-->
+                <!--android:background="@drawable/analyst" />-->
 
-                    <!--<ImageButton-->
-                        <!--android:id="@+id/btn_user"-->
-                        <!--android:layout_width="120dp"-->
-                        <!--android:layout_height="120dp"-->
-                        <!--android:background="@drawable/user" />-->
+                <!--<ImageButton-->
+                <!--android:id="@+id/btn_user"-->
+                <!--android:layout_width="120dp"-->
+                <!--android:layout_height="120dp"-->
+                <!--android:background="@drawable/user" />-->
 
                 <!--</TableRow>-->
-
 
 
             </TableLayout>
@@ -149,12 +149,12 @@
                 android:layout_height="10dp" />
 
             <TableRow
-            android:layout_width="300dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center_horizontal"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="42dp"
-            tools:layout_editor_absoluteY="516dp">
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="42dp"
+                tools:layout_editor_absoluteY="516dp">
 
                 <Button
                     android:id="@+id/btnLogin"
@@ -163,12 +163,12 @@
                     android:fontFamily="@font/kanit_bold"
                     android:text="เข้าสู่ระบบ"
                     android:textSize="12sp"
-                    android:textStyle="bold"/>/>
+                    android:textStyle="bold" />/>
 
-            <TextView
-            android:id="@+id/textView3"
-            android:layout_width="20dp"
-            android:layout_height="30dp" />
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp" />
 
                 <Button
                     android:id="@+id/btnRegister"
@@ -177,7 +177,7 @@
                     android:fontFamily="@font/kanit_bold"
                     android:text="สมัครสมาชิก"
                     android:textSize="12sp"
-                    android:textStyle="bold"/>/>
+                    android:textStyle="bold" />/>
             </TableRow>
 
         </LinearLayout>

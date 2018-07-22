@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -74,9 +73,9 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
                     android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    android:layout_marginTop="15dp">
+                    android:orientation="vertical">
 
                     <ImageButton
                         android:id="@+id/btn_soil_member"
@@ -95,9 +94,9 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
                     android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    android:layout_marginTop="15dp">
+                    android:orientation="vertical">
 
                     <ImageButton
                         android:id="@+id/btn_analyst_member"
@@ -116,9 +115,9 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
                     android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    android:layout_marginTop="15dp">
+                    android:orientation="vertical">
 
                     <ImageButton
                         android:id="@+id/btn_user_member"
@@ -131,6 +130,6 @@
 
             </TableLayout>
 
-    </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

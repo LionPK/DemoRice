@@ -1,5 +1,6 @@
 package com.crud.jo.demorice.adapter;
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.crud.jo.demorice.R;
+import com.crud.jo.demorice.ShowWeedDetailActivity;
 import com.crud.jo.demorice.model.Weed;
 
 import java.util.ArrayList;
@@ -33,10 +35,21 @@ public class WeedAdapter extends RecyclerView.Adapter<WeedAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull WeedAdapter.ViewHolder holder, int position) {
         Weed weed = weedArrayList.get(position);
-        Glide.with(context).load(weed.getWeedImg()).into(holder.ImageweedView);
-        holder.weenameView.setText(weed.getNameWeed());
+        Glide.with(context).load(weed.getWeedImg()).into(holder.ImageWeedView);
+        holder.weedNameView.setText(weed.getNameWeed());
         holder.typeTextView.setText(weed.getTypeWeed());
         holder.detailTextView.setText(weed.getDetailWeed());
+
+        final String name = weed.getNameWeed();
+        final String detail = weed.getDetailWeed();
+        final String weed_image = weed.getWeedImg();
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDetailActivity(name, detail,weed_image);
+            }
+        });
     }
 
     @Override
@@ -45,17 +58,27 @@ public class WeedAdapter extends RecyclerView.Adapter<WeedAdapter.ViewHolder> {
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView ImageweedView;
-        TextView weenameView;
+        ImageView ImageWeedView;
+        TextView weedNameView;
         TextView typeTextView;
         TextView detailTextView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            ImageweedView = itemView.findViewById(R.id.weedImageView);
-            weenameView = itemView.findViewById(R.id.weedNameView);
+            ImageWeedView = itemView.findViewById(R.id.weedImageView);
+            weedNameView = itemView.findViewById(R.id.weedNameView);
             typeTextView = itemView.findViewById(R.id.type_weed);
             detailTextView = itemView.findViewById(R.id.detail_weed);
         }
+    }
+
+    private void openDetailActivity(String... details) {
+
+        Intent intent = new Intent(context, ShowWeedDetailActivity.class);
+        intent.putExtra("name", details[0]);
+        intent.putExtra("detail", details[1]);
+        intent.putExtra("weed_image", details[2]);
+
+        context.startActivity(intent);
     }
 }

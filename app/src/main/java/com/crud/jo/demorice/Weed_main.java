@@ -22,8 +22,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 
-public class weed_list extends AppCompatActivity {
-    private String TAG = weed_list.class.getSimpleName();
+public class Weed_main extends AppCompatActivity {
+    private String TAG = Weed_main.class.getSimpleName();
 
     private ProgressDialog pDialog;
     private RecyclerView lv;
@@ -66,7 +66,7 @@ public class weed_list extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             // Showing progress dialog
-            pDialog = new ProgressDialog(weed_list.this);
+            pDialog = new ProgressDialog(Weed_main.this);
             pDialog.setMessage("Please wait...");
             pDialog.setCancelable(false);
             pDialog.show();
@@ -142,9 +142,9 @@ public class weed_list extends AppCompatActivity {
             /**
              * Updating parsed JSON data into ListView
              * */
-            WeedAdapter WeedAdapter = new WeedAdapter(weed_list.this, contactList);
+            WeedAdapter WeedAdapter = new WeedAdapter(Weed_main.this, contactList);
             lv.setAdapter(WeedAdapter);
-            lv.setLayoutManager(new LinearLayoutManager(weed_list.this, LinearLayoutManager.VERTICAL, false));
+            lv.setLayoutManager(new LinearLayoutManager(Weed_main.this, LinearLayoutManager.VERTICAL, false));
         }
 
     }

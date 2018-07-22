@@ -1,7 +1,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <SwitchPreference
-        android:defaultValue="true"
         android:id="@+id/geolocation_enabled"
+        android:defaultValue="true"
         android:key="@string/pref_geolocation_enabled"
         android:summary="@string/pref_description_enable_geolocation"
         android:title="@string/pref_title_enable_geolocation" />

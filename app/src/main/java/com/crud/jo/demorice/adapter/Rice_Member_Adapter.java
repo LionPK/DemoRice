@@ -1,5 +1,6 @@
 package com.crud.jo.demorice.adapter;
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.crud.jo.demorice.R;
+import com.crud.jo.demorice.ShowRiceMemberDetailActivity;
 import com.crud.jo.demorice.model.Rice;
 import java.util.ArrayList;
 
@@ -38,6 +40,17 @@ public class Rice_Member_Adapter  extends RecyclerView.Adapter<Rice_Member_Adapt
         holder.nameTextView.setText(rice.getNameRice());
         holder.detailTextView.setText(rice.getDetailRice());
         holder.typeTextView.setText(rice.getTypeRice());
+
+        final String name = rice.getNameRice();
+        final String detail = rice.getDetailRice();
+        final String rice_image = rice.getRiceImg();
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDetailActivity(name, detail, rice_image);
+            }
+        });
     }
 
     @Override
@@ -58,5 +71,15 @@ public class Rice_Member_Adapter  extends RecyclerView.Adapter<Rice_Member_Adapt
             typeTextView = itemView.findViewById(R.id.typeTextView);
             detailTextView = itemView.findViewById(R.id.detailTextView);
         }
+    }
+
+    private void openDetailActivity(String... details) {
+
+        Intent intent = new Intent(context, ShowRiceMemberDetailActivity.class);
+        intent.putExtra("name", details[0]);
+        intent.putExtra("detail", details[1]);
+        intent.putExtra("rice_image", details[2]);
+
+        context.startActivity(intent);
     }
 }

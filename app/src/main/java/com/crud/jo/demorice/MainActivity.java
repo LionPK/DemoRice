@@ -4,12 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Spinner;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private Button btnLoginLink;
@@ -67,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this,
-                        weed_list.class);
+                        Weed_main.class);
                 startActivity(i);
                 finish();
             }

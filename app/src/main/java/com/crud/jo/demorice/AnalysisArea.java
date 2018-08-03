@@ -15,10 +15,9 @@ public class AnalysisArea extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.content_analysis);
-
-
-
             Spinner mySpinner = (Spinner) findViewById(R.id.spinnerrice);
+
+
 
             ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(AnalysisArea.this,
                     android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.spinnerrice));
@@ -26,17 +25,7 @@ public class AnalysisArea extends AppCompatActivity {
             myAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
             mySpinner.setAdapter(myAdapter);
 
-            Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_backsoil) ;
-            setSupportActionBar(toolbar);
-            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent i = new Intent(getApplicationContext(),
-                            Users_Main.class);
-                    startActivity(i);
-                    finish();
+    }
+    
+    }
 
-        }
-    }
-    }
-}

@@ -71,7 +71,7 @@ public class Users_Main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Users_Main.this,
-                        ferilizer_list.class);
+                        AnalysisArea.class);
                 startActivity(i);
                 finish();
             }

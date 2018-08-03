@@ -9,6 +9,20 @@
     <string name="button_exit">ย้อนกลับ</string>
     <string name="toolbar"></string>
 
+    <string-array name="spinnerrice">
+        <item>กข11</item>
+        <item>กข29</item>
+        <item>กข31</item>
+        <item>กข39</item>
+        <item>กข41</item>
+        <item>กข43</item>
+        <item>สุพรรณบุรี1</item>
+        <item>สุพรรณบุรี60</item>
+        <item>ชัยนาท1</item>
+        <item>ปทุมธานี1</item>
+        <item>พิษณุโลก2</item>
+    </string-array>
+
     <string name="text_username">กรุณากรอกชื่อผู้ใช้ </string>
     <string name="text_fast_name">กรุณากรอกชื่อ(รองรับภาษาไทย)</string>
     <string name="text_last_name">กรุณากรอกนามสกุล(รองรับภาษาไทย)</string>

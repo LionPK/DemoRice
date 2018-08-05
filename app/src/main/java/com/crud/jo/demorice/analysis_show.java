@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import com.crud.jo.demorice.adapter.Weed_Member_Adapter;
@@ -98,7 +99,7 @@ public class analysis_show extends AppCompatActivity {
                         String type_weed = c.getString("type_weed");
                         String detail_weed = c.getString("detail_weed");
                         String img_weed = c.getString("img_weed");
-                        contactList.add(new Weed(id_weed,name_weed,type_weed,detail_weed,img_weed));
+                        contactList.add(new Analysis(id_weed,name_weed,type_weed,detail_weed,img_weed));
                     }
                 } catch (final JSONException e) {
                     Log.e(TAG, "Json parsing error: " + e.getMessage());
@@ -139,9 +140,9 @@ public class analysis_show extends AppCompatActivity {
             /**
              * Updating parsed JSON data into ListView
              * */
-            Weed_Member_Adapter weed_Member_Adapter = new Weed_Member_Adapter(WeedMember_list.this,contactList);
-            lv.setAdapter(weed_Member_Adapter);
-            lv.setLayoutManager(new LinearLayoutManager(WeedMember_list.this,LinearLayoutManager.VERTICAL,false));
+            ArrayAdapter weed_Member_Adapter = new ArrayAdapter(WeedMember_list.this,contactList);
+            lv.setAdapter(ArrayAdapter);
+            lv.setLayoutManager(new LinearLayoutManager(analysis_show.this,LinearLayoutManager.VERTICAL,false));
         }
 
     }

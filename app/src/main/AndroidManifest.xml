@@ -61,6 +61,8 @@
         <activity android:name=".ShowRiceDetailActivity" />
         <activity android:name=".WeedMember_list" />
         <activity android:name=".SoilMember_list" />
+        <activity android:name=".AnalysisArea" />
+
         <activity
             android:name=".model.analysis"
             android:label="@string/title_activity_analysis"

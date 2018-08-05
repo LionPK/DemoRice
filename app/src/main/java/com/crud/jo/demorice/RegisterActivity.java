@@ -9,8 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -35,7 +37,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText inputFullName;
     private EditText inputFirstName;
     private EditText inputLastName;
-    private EditText inputSex;
+    private Spinner inputSex;
     private EditText inputWork;
     private EditText inputEmail;
     private EditText inputPassword;
@@ -64,7 +66,7 @@ public class RegisterActivity extends AppCompatActivity {
         inputFullName = (EditText) findViewById(R.id.user_edit_text);
         inputFirstName = (EditText) findViewById(R.id.first_edit_text);
         inputLastName = (EditText) findViewById(R.id.last_edit_text);
-        inputSex = (EditText) findViewById(R.id.sex_edit_text);
+        inputSex = (Spinner) findViewById(R.id.sex_edit_text);
         inputWork = (EditText) findViewById(R.id.career_edit_text);
         inputEmail = (EditText) findViewById(R.id.email_edit_text);
         inputPassword = (EditText) findViewById(R.id.password_edit_text);
@@ -72,6 +74,11 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegister = (Button) findViewById(R.id.exit_button);
 //        btnLinkToLogin = (Button) findViewById(R.id.btnLinkToLoginScreen);
 
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(RegisterActivity.this,
+                android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.sex_edit_text));
+
+        myAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        inputSex.setAdapter(myAdapter);
         // Progress dialog
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
@@ -97,7 +104,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String name = inputFullName.getText().toString().trim();
                 String first_name = inputFirstName.getText().toString().trim();
                 String last_name = inputLastName.getText().toString().trim();
-                String sex = inputSex.getText().toString().trim();
+                String sex = inputSex.getSelectedItem().toString().trim();
                 String work = inputWork.getText().toString().trim();
                 String email = inputEmail.getText().toString().trim();
                 String password = inputPassword.getText().toString().trim();

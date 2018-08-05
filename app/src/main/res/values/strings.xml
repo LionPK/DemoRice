@@ -9,6 +9,105 @@
     <string name="button_exit">ย้อนกลับ</string>
     <string name="toolbar"></string>
 
+    <string-array name="sex_edit_text">
+        <item>กรุณาเลือก</item>
+        <item>ชาย</item>
+        <item>หญิง</item>
+    </string-array>
+
+    <string-array name="spinnerrice">
+        <item>กรุณาเลือก</item>
+        <item>กข11</item>
+        <item>กข29</item>
+        <item>กข31</item>
+        <item>กข39</item>
+        <item>กข41</item>
+        <item>กข43</item>
+        <item>สุพรรณบุรี1</item>
+        <item>สุพรรณบุรี60</item>
+        <item>ชัยนาท1</item>
+        <item>ปทุมธานี1</item>
+        <item>พิษณุโลก2</item>
+    </string-array>
+
+    <string-array name="spinnearea">
+        <item>กรุณาเลือก</item>
+        <item>อำเภอคลองหลวง</item>
+        <item>อำเภอเมืองปทุมธานี</item>
+        <item>อำเภอสามโคก</item>
+        <item>อำเภอธัญบุรี</item>
+        <item>อำเภอลาดหลุมแก้ว</item>
+        <item>อำเภอลำลูกกา</item>
+        <item>อำเภอหนองเสือ</item>
+    </string-array>
+    <string-array name="spinnetambon">
+        <item>กรุณาเลือก</item>
+        <item>บางเดื่อ</item>
+        <item>บางกะดี</item>
+        <item>บางขะแยง</item>
+        <item>บางคูวัด</item>
+        <item>บางปรอก</item>
+        <item>บางพูด</item>
+        <item>บ้านใหม่</item>
+        <item>บ้านกระแชง</item>
+        <item>บ้านกลาง</item>
+        <item>บ้านฉาง</item>
+        <item>สวนพริกไทย</item>
+        <item>หลักหก</item>
+        <item>คลองเจ็ด</item>
+        <item>คลองสอง</item>
+        <item>คลองสาม</item>
+        <item>คลองสี่</item>
+        <item>คลองหก</item>
+        <item>คลองหนึ่ง</item>
+        <item>คลองห้า</item>
+        <item>บึงน้ำรักษ์</item>
+        <item>บึงยี่โถ</item>
+        <item>บึงสนั่น</item>
+        <item>ประชาธิปัตย์</item>
+        <item>รังสิต</item>
+        <item>ลำผักกูด</item>
+        <item>คลองพระอุดม</item>
+        <item>คูขวาง</item>
+        <item>คูบางหลวง</item>
+        <item>บ่อเงิน</item>
+        <item>ระแหง</item>
+        <item>ลาดหลุมแก้ว</item>
+        <item>หน้าไม้</item>
+        <item>คูคต</item>
+        <item>บึงคอไห</item>
+        <item>บึงคำพร้อย</item>
+        <item>บึงทองหลาง</item>
+        <item>พืชอุดม</item>
+        <item>ลาดสวาย</item>
+        <item>ลำไทร</item>
+        <item>ลำลูกกา</item>
+        <item>เชียงรากใหญ่</item>
+        <item>เชียงรากน้อย</item>
+        <item>กระแชง</item>
+        <item>คลองควาย</item>
+        <item>ท้ายเกาะ</item>
+        <item>บางเตย</item>
+        <item>บางโพธิ์เหนือ</item>
+        <item>บางกระบือ</item>
+        <item>บ้านงิ้ว</item>
+        <item>บ้านปทุม</item>
+        <item>สามโคก</item>
+        <item>นพรัตน์</item>
+        <item>บึงกาสาม</item>
+        <item>บึงชำอ้อ</item>
+        <item>บึงบอน</item>
+        <item>บึงบา</item>
+        <item>ศาลาครุ</item>
+        <item>หนองสามวัง</item>
+    </string-array>
+    <string-array name="spinnerwater_area">
+        <item>กรุณาเลือก</item>
+        <item>ได้รับ</item>
+        <item>ไม่ได้รับ</item>
+
+    </string-array>
+
     <string name="text_username">กรุณากรอกชื่อผู้ใช้ </string>
     <string name="text_fast_name">กรุณากรอกชื่อ(รองรับภาษาไทย)</string>
     <string name="text_last_name">กรุณากรอกนามสกุล(รองรับภาษาไทย)</string>

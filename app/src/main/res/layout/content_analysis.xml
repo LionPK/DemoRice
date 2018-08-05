@@ -1,23 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".model.analysis"
-    tools:showIn="@layout/activity_analysis">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar_back"
+        android:id="@+id/toolbar"
         style="@style/MyToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="ย้อนกลับ" />
+        app:title="วิเคราะห์พันธุ์ข้าว" />
+
 
     <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent" />
+        android:id="@+id/spinnerrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="131dp" />
 
-</android.support.constraint.ConstraintLayout>
+    <Spinner
+        android:id="@+id/spinnearea"
+        android:layout_below="@+id/spinnerrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="73dp" />
+
+    <Spinner
+        android:id="@+id/spinnetambon"
+        android:layout_below="@+id/spinnearea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="191dp" />
+
+    <Spinner
+        android:id="@+id/spinnerwater_area"
+        android:layout_below="@+id/spinnetambon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="253dp" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/exit_button"
+        style="@style/Widget.demorice.Button"
+        android:layout_below="@+id/spinnerwater_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/text_save" />
+
+</RelativeLayout>

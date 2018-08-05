@@ -2,10 +2,8 @@ package com.crud.jo.demorice;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -13,13 +11,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.crud.jo.demorice.model.Analysis;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -33,6 +26,11 @@ public class AnalysisArea extends AppCompatActivity {
     private Spinner mySpinnerarea;
     private Spinner mySpinnertambon;
     private Spinner mySpinnerwater_area;
+
+    private int[] rice_picture = {
+            R.drawable.icon_0,
+
+    };
 
 
     // URL to get contacts JSON
@@ -111,6 +109,7 @@ public class AnalysisArea extends AppCompatActivity {
                         final String test = "สวัสดี";
                         Intent intent = new Intent(AnalysisArea.this, ShowRiceCalculateActivity.class);
                         intent.putExtra("Message", test);
+                        intent.putExtra("Picture",rice_picture[0]);
                         startActivity(intent);
                     }else {
 

@@ -62,8 +62,6 @@
         <activity android:name=".WeedMember_list" />
         <activity android:name=".SoilMember_list" />
         <activity android:name=".AnalysisArea" />
-        <activity android:name=".analysis_show" />
-
         <activity
             android:name=".model.Analysis"
             android:label="@string/title_activity_analysis"
@@ -74,7 +72,8 @@
         <activity android:name=".ShowRiceMemberDetailActivity" />
         <activity android:name=".ShowWeedMemberDetailActivity" />
         <activity android:name=".ShowSoilMemberDetailActivity" />
-        <activity android:name=".ShowFertilizerMemberDetailActivity"></activity>
+        <activity android:name=".ShowFertilizerMemberDetailActivity" />
+        <activity android:name=".ShowRiceCalculateActivity"></activity>
     </application>
 
 </manifest>

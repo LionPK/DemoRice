@@ -117,6 +117,7 @@
 
     <string name="text_sex">กรุณากรอกระบุเพศ</string>
     <string name="text_save">บันทึก</string>
+    <string name="text_cal">คำนวณ</string>
 
     <!--login and register display-->
     <string name="welcome">Welcome</string>

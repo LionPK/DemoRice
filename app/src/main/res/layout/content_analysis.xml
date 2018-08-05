@@ -22,13 +22,21 @@
         android:id="@+id/spinnearea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_below="@+id/spinnerrice" />
+=======
+        android:layout_marginTop="256dp" />
+>>>>>>> ac84e95e0571181d2a9ad305114f508f27376cee
 
     <Spinner
         android:id="@+id/spinnetambon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_below="@+id/spinnearea" />
+=======
+        android:layout_marginBottom="200dp" />
+>>>>>>> ac84e95e0571181d2a9ad305114f508f27376cee
 
     <Spinner
         android:id="@+id/spinnerwater_area"

@@ -20,17 +20,15 @@
 
     <Spinner
         android:id="@+id/spinnearea"
-        android:layout_below="@+id/spinnerrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="73dp" />
+        android:layout_marginTop="256dp" />
 
     <Spinner
         android:id="@+id/spinnetambon"
-        android:layout_below="@+id/spinnearea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="191dp" />
+        android:layout_marginBottom="200dp" />
 
     <Spinner
         android:id="@+id/spinnerwater_area"

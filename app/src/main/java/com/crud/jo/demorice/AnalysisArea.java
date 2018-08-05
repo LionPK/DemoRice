@@ -112,7 +112,7 @@ public class AnalysisArea extends AppCompatActivity {
                         Intent intent = new Intent(AnalysisArea.this, ShowRiceCalculateActivity.class);
                         intent.putExtra("Message", test);
                         startActivity(intent);
-                    }else{
+                    }else {
 
                     }
 

@@ -8,6 +8,12 @@
     <string name="button_register">ลงทะเบียน</string>
     <string name="button_exit">ย้อนกลับ</string>
     <string name="toolbar"></string>
+    <string name="text1">เกรุณาระบุพันธุ์ข้าว</string>
+    <string name="text2">กรุณาระบุอำเภอ</string>
+    <string name="text3">กรถณาระบุตำบล</string>
+    <string name="text4">พื้นที่ที่ท่านอยู่ได้รับน้ำจากกรมชลประทานหหรือไม่</string>
+
+
 
     <string-array name="sex_edit_text">
         <item>กรุณาเลือก</item>

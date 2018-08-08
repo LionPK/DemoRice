@@ -1,9 +1,12 @@
 package com.crud.jo.demorice;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -48,6 +51,18 @@ public class ShowRiceCalculateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_rice_calculate);
 
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_back) ;
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),
+                        AnalysisArea.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
         Bundle bundle = getIntent().getExtras();
         String data0 = bundle.getString("Messagerice_type");//ข้อความต้องตรงกลับที่ส่งมาในหน้า analysisArea
         String data1 = bundle.getString("Messageweather_napee");//ข้อความต้องตรงกลับที่ส่งมาในหน้า analysisArea
@@ -64,7 +79,10 @@ public class ShowRiceCalculateActivity extends AppCompatActivity {
         String data12 = bundle.getString("Messagerice_method_one");//ข้อความต้องตรงกลับที่ส่งมาในหน้า analysisArea
         String data13 = bundle.getString("Messagerice_method_two");//ข้อความต้องตรงกลับที่ส่งมาในหน้า analysisArea
         String data14 = bundle.getString("Messagerice_method_three");//ข้อความต้องตรงกลับที่ส่งมาในหน้า analysisArea
-        Integer pic = bundle.getInt("Picture");//ข้อความต้องตรงกลับที่ส่งมาในหน้า analysisArea
+        Integer pic1 = bundle.getInt("Picture1");//ข้อความต้องตรงกลับที่ส่งมาในหน้า analysisArea
+        Integer pic2 = bundle.getInt("Picture2");//ข้อความต้องตรงกลับที่ส่งมาในหน้า analysisArea
+        Integer pic3 = bundle.getInt("Picture3");//ข้อความต้องตรงกลับที่ส่งมาในหน้า analysisArea
+        Integer pic4 = bundle.getInt("Picture4");//ข้อความต้องตรงกลับที่ส่งมาในหน้า analysisArea
 
         TextView impact_data0 = (TextView)findViewById(R.id.rice_typr);
         impact_data0.setText(data0);
@@ -98,15 +116,50 @@ public class ShowRiceCalculateActivity extends AppCompatActivity {
         impact_data13.setText(data14);
 
 
-        Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-        ImageView image = (ImageView)findViewById(R.id.riceImageView);
-        image.setImageBitmap(pc);
-        Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-        ImageView image1 = (ImageView)findViewById(R.id.soilImageView);
-        image1.setImageBitmap(pc1);
-        Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0001)).getBitmap();
-        ImageView image2 = (ImageView)findViewById(R.id.ferImagememberView);
-        image2.setImageBitmap(pc2);
+        if(pic1 == rice_picture[0] && pic2== rice_picture[11] && pic3 == rice_picture[0] && pic4 == rice_picture[17]){
+            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
+            ImageView image = (ImageView)findViewById(R.id.riceImageView);
+            image.setImageBitmap(pc);
+            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
+            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
+            image1.setImageBitmap(pc1);
+            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0001)).getBitmap();
+            ImageView image2 = (ImageView)findViewById(R.id.soilImageView);
+            image2.setImageBitmap(pc2);
+            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0001)).getBitmap();
+            ImageView image3 = (ImageView)findViewById(R.id.ferImagememberView);
+            image3.setImageBitmap(pc3);
+        }
+        else if(pic1 == 2 && pic2== 11 && pic3 == 10 && pic4 == 21){
+            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0070)).getBitmap();
+            ImageView image = (ImageView)findViewById(R.id.riceImageView);
+            image.setImageBitmap(pc);
+            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
+            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
+            image1.setImageBitmap(pc1);
+            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
+            ImageView image2 = (ImageView)findViewById(R.id.soilImageView);
+            image2.setImageBitmap(pc2);
+            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0008)).getBitmap();
+            ImageView image3 = (ImageView)findViewById(R.id.ferImagememberView);
+            image2.setImageBitmap(pc2);
+        }
+        else if(pic1 == 2 && pic2== 12 && pic3 == 11 && pic4 == 22){
+            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0109)).getBitmap();
+            ImageView image = (ImageView)findViewById(R.id.riceImageView);
+            image.setImageBitmap(pc);
+            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0168)).getBitmap();
+            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
+            image1.setImageBitmap(pc1);
+            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
+            ImageView image2 = (ImageView)findViewById(R.id.soilImageView);
+            image2.setImageBitmap(pc2);
+            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0009)).getBitmap();
+            ImageView image3 = (ImageView)findViewById(R.id.ferImagememberView);
+            image2.setImageBitmap(pc2);
+
+        }
+
 
     }
 }

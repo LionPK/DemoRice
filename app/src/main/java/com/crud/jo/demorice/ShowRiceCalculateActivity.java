@@ -35,6 +35,7 @@ public class ShowRiceCalculateActivity extends AppCompatActivity {
             R.drawable.weed0286,//2
             R.drawable.weed0463,//3
             R.drawable.weed0523,//4
+            R.drawable.logo,//5
     };
     private int[] fer_picture = {
             //fertilizer
@@ -121,27 +122,27 @@ public class ShowRiceCalculateActivity extends AppCompatActivity {
         impact_data13.setText(data14);
 
 
-        if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic4 == fer_picture[0]){
+        if(pic1 == rice_picture[0] && pic2 == weed_picture[5] &&pic3 == soil_picture[0] && pic4 == fer_picture[0]){
             Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
             ImageView image = (ImageView)findViewById(R.id.riceImageView);
             image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0001)).getBitmap();
+            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.logo)).getBitmap();
+            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
+            image1.setImageBitmap(pc1);
+            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
             ImageView image2 = (ImageView)findViewById(R.id.soilImageView);
             image2.setImageBitmap(pc2);
             Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0001)).getBitmap();
             ImageView image3 = (ImageView)findViewById(R.id.ferImagememberView);
             image3.setImageBitmap(pc3);
         }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[2] ){
+        else if(pic1 == rice_picture[0] && pic2== weed_picture[5] && pic3 == soil_picture[0] && pic4 == fer_picture[1] ){
             Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
             ImageView image = (ImageView)findViewById(R.id.riceImageView);
             image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
+            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.logo)).getBitmap();
+            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
+            image1.setImageBitmap(pc1);
             Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
             ImageView image2 = (ImageView)findViewById(R.id.soilImageView);
             image2.setImageBitmap(pc2);
@@ -149,27 +150,13 @@ public class ShowRiceCalculateActivity extends AppCompatActivity {
             ImageView image3 = (ImageView)findViewById(R.id.ferImagememberView);
             image3.setImageBitmap(pc3);
         }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ){
+        else if(pic1 == rice_picture[0] && pic2 == weed_picture[5] && pic3 == soil_picture[0] && pic4 == fer_picture[2] ){
             Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
             ImageView image = (ImageView)findViewById(R.id.riceImageView);
             image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView)findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView)findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[2] ){
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView)findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
+            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.logo)).getBitmap();
+            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
+            image1.setImageBitmap(pc1);
             Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
             ImageView image2 = (ImageView)findViewById(R.id.soilImageView);
             image2.setImageBitmap(pc2);
@@ -177,41 +164,27 @@ public class ShowRiceCalculateActivity extends AppCompatActivity {
             ImageView image3 = (ImageView)findViewById(R.id.ferImagememberView);
             image3.setImageBitmap(pc3);
         }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ){
+        else if(pic1 == rice_picture[0] && pic2== weed_picture[5] && pic3== soil_picture[0] && pic4 == fer_picture[3] ){
             Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
             ImageView image = (ImageView)findViewById(R.id.riceImageView);
             image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
+            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.logo)).getBitmap();
+            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
+            image1.setImageBitmap(pc1);
             Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
             ImageView image2 = (ImageView)findViewById(R.id.soilImageView);
             image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
+            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0006l)).getBitmap();
             ImageView image3 = (ImageView)findViewById(R.id.ferImagememberView);
             image3.setImageBitmap(pc3);
         }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ){
+        else if(pic1 == rice_picture[0] && pic2 == weed_picture[5] && pic3 == soil_picture[0] && pic4 == fer_picture[4] ){
             Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
             ImageView image = (ImageView)findViewById(R.id.riceImageView);
             image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView)findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView)findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[4] ){
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView)findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
+            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.logo)).getBitmap();
+            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
+            image1.setImageBitmap(pc1);
             Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
             ImageView image2 = (ImageView)findViewById(R.id.soilImageView);
             image2.setImageBitmap(pc2);
@@ -219,746 +192,32 @@ public class ShowRiceCalculateActivity extends AppCompatActivity {
             ImageView image3 = (ImageView)findViewById(R.id.ferImagememberView);
             image3.setImageBitmap(pc3);
         }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[5] ) {
+        else if(pic1 == rice_picture[0] && pic2 == weed_picture[5] && pic3 == soil_picture[0] && pic4 == fer_picture[5] ){
             Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
+            ImageView image = (ImageView)findViewById(R.id.riceImageView);
             image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
+            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.logo)).getBitmap();
+            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
+            image1.setImageBitmap(pc1);
             Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
+            ImageView image2 = (ImageView)findViewById(R.id.soilImageView);
             image2.setImageBitmap(pc2);
             Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0008)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
+            ImageView image3 = (ImageView)findViewById(R.id.ferImagememberView);
             image3.setImageBitmap(pc3);
         }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[6] ) {
+        else if(pic1 == rice_picture[0] && pic2 == weed_picture[5] && pic3 == soil_picture[0] && pic4 == fer_picture[6] ){
             Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
+            ImageView image = (ImageView)findViewById(R.id.riceImageView);
             image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
+            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.logo)).getBitmap();
+            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
+            image1.setImageBitmap(pc1);
             Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
+            ImageView image2 = (ImageView)findViewById(R.id.soilImageView);
             image2.setImageBitmap(pc2);
             Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0009)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[3] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0006l)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[9] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0009)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[2] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0004)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[6] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0009)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[4] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0007)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[5] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0008)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[4] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0007)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[3] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0006l)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[6] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0009)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[6] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0009)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[3] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0006l)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[6] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0009)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[6] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0009)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[5] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0008)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[5] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0008)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[5] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0008)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[6] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0009)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[5] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0008)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[2] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0004)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[2] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0004)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[2] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0004)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[3] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0006l)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[6] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0009)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[6] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0001)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[2] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0004)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[2] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0004)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[5] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0008)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[2] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0004)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[2] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0004)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[2] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0004)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[2] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0004)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[2] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0004)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[1] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0002)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
-            image3.setImageBitmap(pc3);
-        }
-        else if(pic1 == rice_picture[0] && pic2== soil_picture[0] && pic3 == fer_picture[2] ) {
-            Bitmap pc = ((BitmapDrawable) getResources().getDrawable(R.drawable.rice0001)).getBitmap();
-            ImageView image = (ImageView) findViewById(R.id.riceImageView);
-            image.setImageBitmap(pc);
-//            Bitmap pc1 = ((BitmapDrawable) getResources().getDrawable(R.drawable.weed0070)).getBitmap();
-//            ImageView image1 = (ImageView)findViewById(R.id.weedImageView);
-//            image1.setImageBitmap(pc1);
-            Bitmap pc2 = ((BitmapDrawable) getResources().getDrawable(R.drawable.soil0001)).getBitmap();
-            ImageView image2 = (ImageView) findViewById(R.id.soilImageView);
-            image2.setImageBitmap(pc2);
-            Bitmap pc3 = ((BitmapDrawable) getResources().getDrawable(R.drawable.fer0004)).getBitmap();
-            ImageView image3 = (ImageView) findViewById(R.id.ferImagememberView);
+            ImageView image3 = (ImageView)findViewById(R.id.ferImagememberView);
             image3.setImageBitmap(pc3);
         }
 }

@@ -73,7 +73,7 @@
         <activity android:name=".ShowWeedMemberDetailActivity" />
         <activity android:name=".ShowSoilMemberDetailActivity" />
         <activity android:name=".ShowFertilizerMemberDetailActivity" />
-        <activity android:name=".ShowRiceCalculateActivity"></activity>
+        <activity android:name=".ShowRiceCalculateActivity" />
     </application>
 
 </manifest>

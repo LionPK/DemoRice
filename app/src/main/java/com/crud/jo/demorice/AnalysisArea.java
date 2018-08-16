@@ -2483,6 +2483,7 @@ public class AnalysisArea extends AppCompatActivity {
 
 //กรณี error
                 }else {
+
                     //จะให้ทำอะไร
                 }
 

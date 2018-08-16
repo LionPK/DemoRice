@@ -50,7 +50,6 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:layout_alignParentBottom="true"
-                        android:layout_alignParentStart="true"
                         android:background="#9033ffbd"
                         android:gravity="center"
                         android:text="Weed Name"

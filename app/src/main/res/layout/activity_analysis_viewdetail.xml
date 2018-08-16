@@ -19,53 +19,38 @@
 
         <ImageView
             android:id="@+id/riceImageView"
-            android:layout_width="130dp"
+            android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_margin="4dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             android:src="@mipmap/ic_launcher" />
-
-        <ImageView
-            android:id="@+id/weedImageView"
-            android:layout_width="130dp"
-            android:layout_height="150dp"
-            android:layout_margin="4dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher" />
-        <ImageView
-            android:id="@+id/soilImageView"
-            android:layout_width="130dp"
-            android:layout_height="150dp"
-            android:layout_margin="4dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher" />
-
-        <ImageView
-            android:id="@+id/ferImagememberView"
-            android:layout_width="130dp"
-            android:layout_height="150dp"
-            android:layout_margin="4dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher" />
-
 
 
         <TextView
             android:id="@+id/rice_typr"
+            android:layout_marginTop="@+id/riceImageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:gravity="left|center_vertical"
+            android:gravity="center|center_vertical"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:text="WeedType"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_below="@id/riceImageView"
+            />
+        <ImageView
+            android:id="@+id/weedImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_margin="4dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:layout_below="@id/rice_typr"/>
 
         <TextView
             android:id="@+id/weather_napee"
@@ -80,7 +65,8 @@
             android:paddingTop="4dp"
             android:text="Description"
             android:textSize="14sp"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            android:layout_below="@id/weedImageView"/>
 
         <TextView
         android:id="@+id/weather_napung"
@@ -95,7 +81,8 @@
         android:paddingTop="4dp"
         android:text="Description"
         android:textSize="14sp"
-        tools:ignore="RtlSymmetry" />
+        tools:ignore="RtlSymmetry"
+            android:layout_below="@id/weather_napee"/>
         <TextView
             android:id="@+id/rice_area"
             android:layout_width="match_parent"
@@ -109,7 +96,17 @@
             android:paddingTop="4dp"
             android:text="Description"
             android:textSize="14sp"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            android:layout_below="@id/weather_napung"/>
+        <ImageView
+            android:id="@+id/ferImagememberView"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_margin="4dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:layout_below="@id/rice_area"/>
         <TextView
             android:id="@+id/chemical_fertilizer"
             android:layout_width="match_parent"
@@ -123,7 +120,10 @@
             android:paddingTop="4dp"
             android:text="Description"
             android:textSize="14sp"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            android:layout_below="@id/ferImagememberView"/>
+
+
         <TextView
             android:id="@+id/bio_fertilizer"
             android:layout_width="match_parent"
@@ -137,7 +137,17 @@
             android:paddingTop="4dp"
             android:text="Description"
             android:textSize="14sp"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            android:layout_below="@id/chemical_fertilizer"/>
+        <ImageView
+            android:id="@+id/soilImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_margin="4dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:layout_below="@id/bio_fertilizer"/>
         <TextView
             android:id="@+id/soil_type"
             android:layout_width="match_parent"
@@ -151,7 +161,8 @@
             android:paddingTop="4dp"
             android:text="Description"
             android:textSize="14sp"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            android:layout_below="@id/soilImageView"/>
         <TextView
             android:id="@+id/adjust_soil"
             android:layout_width="match_parent"
@@ -165,7 +176,8 @@
             android:paddingTop="4dp"
             android:text="Description"
             android:textSize="14sp"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            android:layout_below="@id/soil_type"/>
         <TextView
             android:id="@+id/weed_type"
             android:layout_width="match_parent"
@@ -179,7 +191,8 @@
             android:paddingTop="4dp"
             android:text="Description"
             android:textSize="14sp"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            android:layout_below="@id/adjust_soil"/>
         <TextView
         android:id="@+id/weed_removal"
         android:layout_width="match_parent"
@@ -193,7 +206,8 @@
         android:paddingTop="4dp"
         android:text="Description"
         android:textSize="14sp"
-        tools:ignore="RtlSymmetry" />
+        tools:ignore="RtlSymmetry"
+            android:layout_below="@id/weed_type"/>
 
         <TextView
             android:id="@+id/dayrice_napung"
@@ -208,7 +222,8 @@
             android:paddingTop="4dp"
             android:text="Description"
             android:textSize="14sp"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            android:layout_below="@id/weed_removal"/>
 
         <TextView
             android:id="@+id/ricedisease_Removal"
@@ -223,7 +238,8 @@
             android:paddingTop="4dp"
             android:text="Description"
             android:textSize="14sp"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            android:layout_below="@id/dayrice_napung"/>
 
         <TextView
             android:id="@+id/rice_method_one"
@@ -238,7 +254,8 @@
             android:paddingTop="4dp"
             android:text="Description"
             android:textSize="14sp"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            android:layout_below="@id/ricedisease_Removal"/>
 
         <TextView
             android:id="@+id/rice_method_two"
@@ -253,7 +270,8 @@
             android:paddingTop="4dp"
             android:text="Description"
             android:textSize="14sp"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            android:layout_below="@id/rice_method_one"/>
 
         <TextView
             android:id="@+id/rice_method_three"
@@ -268,7 +286,8 @@
             android:paddingTop="4dp"
             android:text="Description"
             android:textSize="14sp"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            android:layout_below="@id/rice_method_two"/>
 
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

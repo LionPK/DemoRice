@@ -22,7 +22,7 @@
     </string-array>
 
     <string-array name="spinnerrice">
-        <item>กรุณาเลือก</item>
+        <item>กรุณาเลือกพันธุ์ข้าว</item>
         <item>กข11</item>
         <item>กข29</item>
         <item>กข31</item>
@@ -37,7 +37,7 @@
     </string-array>
 
     <string-array name="spinnearea">
-        <item>กรุณาเลือก</item>
+        <item>กรุณาเลือกอำเถอ</item>
         <item>อำเภอคลองหลวง</item>
         <item>อำเภอเมืองปทุมธานี</item>
         <item>อำเภอสามโคก</item>
@@ -47,7 +47,7 @@
         <item>อำเภอหนองเสือ</item>
     </string-array>
     <string-array name="spinnetambon">
-        <item>กรุณาเลือก</item>
+        <item>กรุณาเลือกตำบล</item>
         <item>บางเดื่อ</item>
         <item>บางกะดี</item>
         <item>บางขะแยง</item>
@@ -108,7 +108,7 @@
         <item>หนองสามวัง</item>
     </string-array>
     <string-array name="spinnerwater_area">
-        <item>กรุณาเลือก</item>
+        <item>กรุณาเลือกพื้นที่ได้รับน้ำจากกรมชลประทาน</item>
         <item>ได้รับ</item>
         <item>ไม่ได้รับ</item>
 

@@ -62,10 +62,6 @@
         <activity android:name=".WeedMember_list" />
         <activity android:name=".SoilMember_list" />
         <activity android:name=".AnalysisArea" />
-        <activity
-            android:name=".model.Analysis"
-            android:label="@string/title_activity_analysis"
-            android:theme="@style/AppTheme" />
         <activity android:name=".ShowWeedDetailActivity" />
         <activity android:name=".ShowSoilDetailActivity" />
         <activity android:name=".ShowFertilizerDetailActivity" />

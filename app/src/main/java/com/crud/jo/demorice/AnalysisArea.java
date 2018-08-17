@@ -51,6 +51,7 @@ public class AnalysisArea extends AppCompatActivity {
             R.drawable.weed0286,//2
             R.drawable.weed0463,//3
             R.drawable.weed0523,//4
+            R.drawable.logo,//5
     };
     private int[] fer_picture = {
             //fertilizer
@@ -175,7 +176,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1",rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[0]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3",soil_picture[0]);
                         intent.putExtra("Picture4",fer_picture[0]);//ส่งรูปไป
                         startActivity(intent);
@@ -214,7 +215,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1",rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3",soil_picture[0]);
                         intent.putExtra("Picture4",fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -253,7 +254,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1",rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3",soil_picture[0]);
                         intent.putExtra("Picture4",fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -291,7 +292,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1",rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3",soil_picture[0]);
                         intent.putExtra("Picture4",fer_picture[2]);//ส่งรูปไป
                         startActivity(intent);
@@ -330,7 +331,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -368,7 +369,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -406,7 +407,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[4]);//ส่งรูปไป
                         startActivity(intent);
@@ -446,7 +447,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[5]);//ส่งรูปไป
                         startActivity(intent);
@@ -485,7 +486,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[6]);//ส่งรูปไป
                         startActivity(intent);
@@ -524,7 +525,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[3]);//ส่งรูปไป
                         startActivity(intent);
@@ -564,7 +565,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[6]);//ส่งรูปไป
                         startActivity(intent);
@@ -603,7 +604,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[2]);//ส่งรูปไป
                         startActivity(intent);
@@ -642,7 +643,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[6]);//ส่งรูปไป
                         startActivity(intent);
@@ -682,7 +683,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[4]);//ส่งรูปไป
                         startActivity(intent);
@@ -720,7 +721,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[5]);//ส่งรูปไป
                         startActivity(intent);
@@ -759,7 +760,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -798,7 +799,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[4]);//ส่งรูปไป
                         startActivity(intent);
@@ -837,7 +838,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[3]);//ส่งรูปไป
                         startActivity(intent);
@@ -876,7 +877,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -915,7 +916,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[6]);//ส่งรูปไป
                         startActivity(intent);
@@ -954,7 +955,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[6]);//ส่งรูปไป
                         startActivity(intent);
@@ -992,7 +993,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -1031,7 +1032,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[3]);//ส่งรูปไป
                         startActivity(intent);
@@ -1071,7 +1072,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -1110,7 +1111,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[6]);//ส่งรูปไป
                         startActivity(intent);
@@ -1149,7 +1150,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -1188,7 +1189,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -1227,7 +1228,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[6]);//ส่งรูปไป
                         startActivity(intent);
@@ -1266,7 +1267,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[5]);//ส่งรูปไป
                         startActivity(intent);
@@ -1305,7 +1306,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[5]);//ส่งรูปไป
                         startActivity(intent);
@@ -1344,7 +1345,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[5]);//ส่งรูปไป
                         startActivity(intent);
@@ -1383,7 +1384,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[6]);//ส่งรูปไป
                         startActivity(intent);
@@ -1422,7 +1423,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[5]);//ส่งรูปไป
                         startActivity(intent);
@@ -1461,7 +1462,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -1500,7 +1501,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -1539,7 +1540,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[2]);//ส่งรูปไป
                         startActivity(intent);
@@ -1578,7 +1579,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -1617,7 +1618,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -1656,7 +1657,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[2]);//ส่งรูปไป
                         startActivity(intent);
@@ -1695,7 +1696,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[2]);//ส่งรูปไป
                         startActivity(intent);
@@ -1734,7 +1735,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[3]);//ส่งรูปไป
                         startActivity(intent);
@@ -1773,7 +1774,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[6]);//ส่งรูปไป
                         startActivity(intent);
@@ -1812,7 +1813,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[0]);//ส่งรูปไป
                         startActivity(intent);
@@ -1851,7 +1852,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -1890,7 +1891,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -1929,7 +1930,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[2]);//ส่งรูปไป
                         startActivity(intent);
@@ -1968,7 +1969,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -2007,7 +2008,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -2046,7 +2047,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[2]);//ส่งรูปไป
                         startActivity(intent);
@@ -2085,7 +2086,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[5]);//ส่งรูปไป
                         startActivity(intent);
@@ -2124,7 +2125,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -2163,7 +2164,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -2202,7 +2203,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[2]);//ส่งรูปไป
                         startActivity(intent);
@@ -2241,7 +2242,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[2]);//ส่งรูปไป
                         startActivity(intent);
@@ -2280,7 +2281,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[2]);//ส่งรูปไป
                         startActivity(intent);
@@ -2319,7 +2320,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[2]);//ส่งรูปไป
                         startActivity(intent);
@@ -2358,7 +2359,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -2397,7 +2398,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[2]);//ส่งรูปไป
                         startActivity(intent);
@@ -2436,7 +2437,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[1]);//ส่งรูปไป
                         startActivity(intent);
@@ -2475,7 +2476,7 @@ public class AnalysisArea extends AppCompatActivity {
                         intent.putExtra("Messagerice_method_two", rice_method_two); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Messagerice_method_three", rice_method_three); //รับค่า test มาเก็บไว้ใน masssage
                         intent.putExtra("Picture1", rice_picture[0]);
-//                        intent.putExtra("Picture2",weed_picture[11]);
+                        intent.putExtra("Picture2",weed_picture[5]);
                         intent.putExtra("Picture3", soil_picture[0]);
                         intent.putExtra("Picture4", fer_picture[2]);//ส่งรูปไป
                         startActivity(intent);

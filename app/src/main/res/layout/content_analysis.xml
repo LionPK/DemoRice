@@ -2,7 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
 
    <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -11,6 +13,14 @@
         android:layout_height="wrap_content"
         app:title="วิเคราะห์พันธุ์ข้าว" />
 
+<TextView
+    android:id="@+id/textriveshow"
+    android:layout_marginTop="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/toolbar"
+
+    />
 
     <Spinner
         android:id="@+id/spinnerrice"

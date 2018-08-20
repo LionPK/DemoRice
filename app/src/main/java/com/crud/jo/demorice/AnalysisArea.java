@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -16,8 +17,9 @@ import android.widget.Toast;
 import com.crud.jo.demorice.model.Analysis;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class AnalysisArea extends AppCompatActivity {
+public class AnalysisArea extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private String TAG = Main.class.getSimpleName();
     private ProgressDialog pDialog;
@@ -81,7 +83,6 @@ public class AnalysisArea extends AppCompatActivity {
 
         mySpinnerrice = (Spinner) findViewById(R.id.spinnerrice);
         mySpinnerarea = (Spinner) findViewById(R.id.spinnearea);
-        mySpinnertambon = (Spinner) findViewById(R.id.spinnetambon);
         mySpinnerwater_area = (Spinner) findViewById(R.id.spinnerwater_area);
 
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(AnalysisArea.this,
@@ -90,18 +91,39 @@ public class AnalysisArea extends AppCompatActivity {
         myAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         mySpinnerrice.setAdapter(myAdapter);
 
+        // Spinner click listener
+        mySpinnerarea.setOnItemSelectedListener(this);
 
-        ArrayAdapter<String> myAdapter2 = new ArrayAdapter<String>(AnalysisArea.this,
-                android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.spinnearea));
+        // Spinner Drop down elements
+        List<String> categories = new ArrayList<String>();
+        categories.add("อำเภอคลองหลวง");
+        categories.add("อำเภอเมืองปทุมธานี");
+        categories.add("อำเภอสามโคก");
+        categories.add("อำเภอธัญบุรี");
+        categories.add("อำเภอลาดหลุมแก้ว");
+        categories.add("อำเภอลำลูกกา");
+        categories.add("อำเภอหนองเสือ");
 
-        myAdapter2.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-        mySpinnerarea.setAdapter(myAdapter2);
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
 
-        ArrayAdapter<String> myAdapter3 = new ArrayAdapter<String>(AnalysisArea.this,
-                android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.spinnetambon));
+        // Drop down layout style - list view with radio button
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        myAdapter3.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-        mySpinnertambon.setAdapter(myAdapter3);
+        // attaching data adapter to spinner
+        mySpinnerarea.setAdapter(dataAdapter);
+
+//        ArrayAdapter<String> myAdapter2 = new ArrayAdapter<String>(AnalysisArea.this,
+//                android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.spinnearea));
+//
+//        myAdapter2.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+//        mySpinnerarea.setAdapter(myAdapter2);
+//
+//        ArrayAdapter<String> myAdapter3 = new ArrayAdapter<String>(AnalysisArea.this,
+//                android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.spinnetambon));
+//
+//        myAdapter3.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+//        mySpinnertambon.setAdapter(myAdapter3);
 
         ArrayAdapter<String> myAdapter4 = new ArrayAdapter<String>(AnalysisArea.this,
                 android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.spinnerwater_area));
@@ -126,6 +148,7 @@ public class AnalysisArea extends AppCompatActivity {
         calculat_rice = (Button) findViewById(R.id.cal_button);
 
         calculat_rice.setOnClickListener(new View.OnClickListener() {
+
 
             @Override
             public void onClick(View view) {
@@ -2500,116 +2523,142 @@ public class AnalysisArea extends AppCompatActivity {
 
     }
 
-//    private class GetContacts extends AsyncTask<Void, Void, Void> {
-//
-//        @Override
-//        protected void onPreExecute() {
-//            super.onPreExecute();
-//            // Showing progress dialog
-//            pDialog = new ProgressDialog(AnalysisArea.this);
-//            pDialog.setMessage("Please wait...");
-//            pDialog.setCancelable(false);
-//            pDialog.show();
-//
-//        }
-//
-//        @Override
-//        protected Void doInBackground(Void... arg0) {
-//            HttpHandler sh = new HttpHandler();
-//
-//            // Making a request to url and getting response
-//            String jsonStr = sh.makeServiceCall(url);
-//
-//            Log.d(TAG, "Response from url: " + jsonStr);
-//
-//            if (jsonStr != null) {
-//                try {
-//
-//                    JSONArray mJsonArray = new JSONArray(jsonStr);
-//
-//                    // looping through All Contacts
-//                    for (int i = 0; i < mJsonArray.length(); i++) {
-//                        JSONObject c = mJsonArray.getJSONObject(i);
-//
-//                        String analy1_id = c.getString("analy1_id");
-//                        String rice = c.getString("rice");
-//                        String rice_type = c.getString("rice_type");
-//                        String weather_napee = c.getString("weather_napee");
-//                        String weather_napung = c.getString("weather_napung");
-//                        String district = c.getString("district");
-//                        String tambon = c.getString("tambon");
-//                        String rice_area = c.getString("rice_area");
-//                        String water_area = c.getString("water_area");
-//                        String chemical_fertilizer = c.getString("chemical_fertilizer");
-//                        String bio_fertilizer = c.getString("bio_fertilizer");
-//                        String soil_type = c.getString("soil_type");
-//                        String adjust_soil = c.getString("adjust_soil");
-//                        String weed_type = c.getString("weed_type");
-//                        String weed_Removal = c.getString("weed_Removal");
-//                        String dayrice_napee = c.getString("dayrice_napee");
-//                        String dayrice_napung = c.getString("dayrice_napung");
-//                        String ricedisease_name = c.getString("ricedisease_name");
-//                        String ricedisease_Removal = c.getString("ricedisease_Removal");
-//                        String rice_method_one = c.getString("rice_method_one");
-//                        String rice_method_two = c.getString("rice_method_two");
-//                        String rice_method_three = c.getString("rice_method_three");
-//                        String rice_img = c.getString("rice_img");
-//                        String weed_img = c.getString("weed_img");
-//                        String soil_img = c.getString("soil_img");
-//                        String fer_img = c.getString("fer_img");
-//
-//                        // adding contact to contact list
-//                        contactList.add(new Analysis(analy1_id, rice, rice_type, weather_napee, weather_napung, district, tambon, rice_area, water_area, chemical_fertilizer, bio_fertilizer, soil_type
-//                                , adjust_soil, weed_type, weed_Removal, dayrice_napee, dayrice_napung, ricedisease_name, ricedisease_Removal, rice_method_one, rice_method_two, rice_method_three,
-//                                weed_img, rice_img, soil_img, fer_img));
-//
-//
-//                    }
-//                } catch (final JSONException e) {
-//                    Log.e(TAG, "Json parsing error: " + e.getMessage());
-//                    runOnUiThread(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            Toast.makeText(getApplicationContext(),
-//                                    "Json parsing error: " + e.getMessage(),
-//                                    Toast.LENGTH_LONG)
-//                                    .show();
-//                        }
-//                    });
-//
-//                }
-//            } else {
-//                Log.e(TAG, "Couldn't get json from server.");
-//                runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        Toast.makeText(getApplicationContext(),
-//                                "Couldn't get json from server. Check LogCat for possible errors!",
-//                                Toast.LENGTH_LONG)
-//                                .show();
-//                    }
-//                });
-//
-//            }
-//
-//            return null;
-//        }
-//
-//        @Override
-//        protected void onPostExecute(Void result) {
-//            super.onPostExecute(result);
-//            // Dismiss the progress dialog
-//            if (pDialog.isShowing())
-//                pDialog.dismiss();
-//            /**
-//             * Updating parsed JSON data into ListView
-//             * */
-//
-////                    AnalysisAdapter analysisAdapter = new AnalysisAdapter(AnalysisArea.this,contactList);
-////                    lv.setAdapter(analysisAdapter);
-////                    lv.setLayoutManager(new LinearLayoutManager(AnalysisArea.this,LinearLayoutManager.VERTICAL,false));
-//        }
-//
-//    }
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        // On selecting a spinner item
+        String item = parent.getItemAtPosition(position).toString();
 
+        if(item.equals("อำเภอคลองหลวง")){
+            mySpinnertambon = (Spinner) findViewById(R.id.spinnetambon);
+            mySpinnertambon.setOnItemSelectedListener(this);
+
+            List<String> details = new ArrayList<String>();
+            details.add("กรุณาเลือกตำบล");
+            details.add("คลองหนึ่ง");
+            details.add("คลองสอง");
+            details.add("คลองสาม");
+            details.add("คลองสี่");
+            details.add("คลองห้า");
+            details.add("คลองหก");
+            details.add("คลองเจ็ด");
+
+            ArrayAdapter<String> data2Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, details);
+            data2Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            mySpinnertambon.setAdapter(data2Adapter);
+        }else if (item.equals("อำเภอเมืองปทุมธานี")){
+            mySpinnertambon = (Spinner) findViewById(R.id.spinnetambon);
+            mySpinnertambon.setOnItemSelectedListener(this);
+
+            List<String> details = new ArrayList<String>();
+            details.add("กรุณาเลือกตำบล");
+            details.add("บางปรอก");
+            details.add("บ้านใหม่");
+            details.add("บ้านกลาง");
+            details.add("บ้านฉาง");
+            details.add("บ้านกระแชง");
+            details.add("บางขะแยง");
+            details.add("บางคูวัด");
+
+            ArrayAdapter<String> data2Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, details);
+            data2Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            mySpinnertambon.setAdapter(data2Adapter);
+        }else if (item.equals("อำเภอสามโคก")){
+            mySpinnertambon = (Spinner) findViewById(R.id.spinnetambon);
+            mySpinnertambon.setOnItemSelectedListener(this);
+
+            List<String> details = new ArrayList<String>();
+            details.add("กรุณาเลือกตำบล");
+            details.add("บางเตย");
+            details.add("คลองควาย");
+            details.add("สามโคก");
+            details.add("บางโพธิ์เหนือ");
+            details.add("เชียงรากใหญ่");
+            details.add("บ้านปทุม");
+            details.add("บ้านงิ้ว");
+            details.add("เชียงรากน้อย");
+            details.add("บางกระบือ");
+            details.add("ท้ายเกาะ");
+
+            ArrayAdapter<String> data2Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, details);
+            data2Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            mySpinnertambon.setAdapter(data2Adapter);
+        }else if (item.equals("อำเภอธัญบุรี")){
+            mySpinnertambon = (Spinner) findViewById(R.id.spinnetambon);
+            mySpinnertambon.setOnItemSelectedListener(this);
+
+            List<String> details = new ArrayList<String>();
+            details.add("กรุณาเลือกตำบล");
+            details.add("ประชาธิปัตย์");
+            details.add("บึงยี่โถ");
+            details.add("รังสิต");
+            details.add("ลำผักกูด");
+            details.add("บึงสนั่น");
+            details.add("บึงน้ำรักษ์");
+
+            ArrayAdapter<String> data2Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, details);
+            data2Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            mySpinnertambon.setAdapter(data2Adapter);
+        }else if (item.equals("อำเภอลาดหลุมแก้ว")){
+            mySpinnertambon = (Spinner) findViewById(R.id.spinnetambon);
+            mySpinnertambon.setOnItemSelectedListener(this);
+
+            List<String> details = new ArrayList<String>();
+            details.add("กรุณาเลือกตำบล");
+            details.add("ระแหง");
+            details.add("ลาดหลุมแก้ว");
+            details.add("คูบางหลวง");
+            details.add("คูขวาง");
+            details.add("คลองพระอุดม");
+            details.add("บ่อเงิน");
+            details.add("หน้าไม้");
+
+            ArrayAdapter<String> data2Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, details);
+            data2Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            mySpinnertambon.setAdapter(data2Adapter);
+        }else if (item.equals("อำเภอลำลูกกา")){
+            mySpinnertambon = (Spinner) findViewById(R.id.spinnetambon);
+            mySpinnertambon.setOnItemSelectedListener(this);
+
+            List<String> details = new ArrayList<String>();
+            details.add("กรุณาเลือกตำบล");
+            details.add("คูคต");
+            details.add("ลาดสวาย");
+            details.add("บึงคำพร้อย");
+            details.add("ลำลูกกา");
+            details.add("บึงทองหลาง");
+            details.add("ลำไทร");
+            details.add("บึงคอไห");
+            details.add("พืชอุดม");
+
+            ArrayAdapter<String> data2Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, details);
+            data2Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            mySpinnertambon.setAdapter(data2Adapter);
+        }else if (item.equals("อำเภอหนองเสือ")){
+            mySpinnertambon = (Spinner) findViewById(R.id.spinnetambon);
+            mySpinnertambon.setOnItemSelectedListener(this);
+
+            List<String> details = new ArrayList<String>();
+            details.add("กรุณาเลือกตำบล");
+            details.add("บึงบา");
+            details.add("บึงบอน");
+            details.add("บึงกาสาม");
+            details.add("บึงชำอ้อ");
+            details.add("หนองสามวัง");
+            details.add("ศาลาครุ");
+            details.add("นพรัตน์");
+
+            ArrayAdapter<String> data2Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, details);
+            data2Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            mySpinnertambon.setAdapter(data2Adapter);
+        }
+
+        // Showing selected spinner item
+//        Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
+
+    }
+
+    public void onNothingSelected(AdapterView<?> arg0) {
+        // TODO Auto-generated method stub
+
+    }
 }
